@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var algoliaIndex = 'smart-edge-open';
+    var algoliaIndex = 'jekyll_search';
     var landing = 'docs';
     var input = '.input-section';
     var output ='.output-section';
