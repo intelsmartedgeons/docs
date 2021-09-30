@@ -1,6 +1,7 @@
 
 function formsubmit() {
-    var opurl = apiURL+'/index.php?option=com_products&task=githubpages_release_request';
+    var opurl = 'https://openness-staging.onsumaye.com/index.php?option=com_products&task=githubpages_release_request';
+    //var opurl='https://openness.localhost.com/index.php?option=com_products&task=githubpages_release_request';
     var form = $("#requestAccess");
     var url =
         $.ajax({
@@ -11,7 +12,7 @@ function formsubmit() {
             success: function (data) {
                 var data = jQuery.parseJSON(data)
                 if (data.status == 1) {
-                    window.location.href = '/thankyou';
+                    window.location.href = '/intel-smart-edge-open/thankyou';
                 } else {
                     $("#bug").html(data.msg.serverError);
                 }
@@ -27,7 +28,7 @@ function formsubmit() {
 
 
 function contactformsubmit() {
-    var opurl = apiURL+'/index.php?option=com_products&task=githubpages_contact_request';
+    var opurl = 'https://openness-staging.onsumaye.com/index.php?option=com_products&task=githubpages_contact_request';
     var form = $("#contact");
     var url =
         $.ajax({
@@ -38,7 +39,7 @@ function contactformsubmit() {
             success: function (data) {
                 var data = jQuery.parseJSON(data)
                 if (data.status == 1) {
-                    window.location.href = '/thankyou';
+                    window.location.href = '/intel-smart-edge-open/thankyou';
                 } else {
                     $("#bug").html(data.msg.serverError);
                 }
