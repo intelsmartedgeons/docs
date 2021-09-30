@@ -4,7 +4,7 @@ title: Intel® Smart Edge Open - Bring Your Edge Solution to Market Faster
 description: Intel® Smart Edge Open speeds up development with reference solutions design for common network edge and on-premises use cases, powered by a Certified Kubernetes cloud-native stack.
 width: expand
 hero:
-    search: false
+    search: true
 ---
 
 {% include boxesHead.html columns="3" title="" subtitle="" %}
