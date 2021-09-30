@@ -10,7 +10,7 @@ description:        Documentation Jekyll theme.
 lang:               en
 
 # Site subpath, e.g. /blog
-baseurl:            ""
+baseurl:            "/docs"
 
 
 apiURL: "https://openness-staging.onsumaye.com"
