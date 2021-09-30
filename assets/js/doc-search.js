@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var algoliaIndex = 'jekyll_search';
+    var algoliaIndex = 'Jekyll_search';
     var landing = 'docs';
     var input = '.input-section';
     var output ='.output-section';
