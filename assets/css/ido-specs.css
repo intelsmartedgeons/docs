@@ -265,6 +265,7 @@
  }
  @media (max-width:767px) {
  .menubar{top:45px}
+ .container .leftSection .searchBar-section .popover{max-width:100%}
  }
  @media (min-width:769px) {
  .menubar li:hover>ul{display:block!important;position:absolute}
