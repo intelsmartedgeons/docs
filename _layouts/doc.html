@@ -44,8 +44,7 @@ layout: default
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}
                                     {% assign doc_url = nav.path | append:"/" %}
-                                    {{ doc_url }}
-                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}">{{ nav.title }}</a></li>
+                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path}}">{{ nav.title }}</a></li>
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
