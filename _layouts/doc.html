@@ -39,12 +39,13 @@ layout: default
                                 {% assign navbars = navigations | sort:"order" %}
                                 
                                 {% for navbar in navbars %}
-                                    <h5>{{ navbar.path }}</h5>
+                                    <h5>{{ navbar.title }}</h5>
                                     <ul class="uk-nav uk-nav-default doc-nav">
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}
                                     {% assign doc_url = nav.path | append:"/" %}
-                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path}}">{{ nav.title }}</a></li>
+                                    {{ doc_url }}
+                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}">{{ nav.title }}</a></li>
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
