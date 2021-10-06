@@ -1,6 +1,6 @@
 title: "Application Onboarding (Open)"
 path: /applications-onboard/
-order: 4
+order: 5
 section:
   #- title: Onboarding Applications to an Intel® Smart Edge Open Single-Node Cluster
   - title: Onboarding Applications (Open)

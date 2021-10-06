@@ -1,6 +1,6 @@
 title: "Previous Building Blocks (Licensed)"
 path: /building-blocks-licensed/
-order: 8
+order: 9
 section:
     - title: Inter-app communication
       #path: /ido-specs/docs/building-blocks/dataplane/openness-interapp

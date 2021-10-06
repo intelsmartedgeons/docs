@@ -1,6 +1,6 @@
 title: "Building Blocks (Open)"
 path: /building-blocks/
-order: 3
+order: 4
 section:
     - title: Core Pinning
       path: /docs/components/resource-management/core-pinning
