@@ -49,7 +49,7 @@ spec:
     }
   }'
 EOF
-
+```
 To list defined configurations, use:
 
 ```bash
