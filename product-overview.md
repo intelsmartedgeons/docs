@@ -26,7 +26,7 @@ As cloud architectures disaggregate in the era of 5G, opportunities emerge for n
 
 Intel® Smart Edge Open experience kits offer you a starting point to create platforms for edge locations. Experience kits simplify the deployment of complex network architectures, significantly reducing development time and cost. Experience kits combine 5G capabilities and cloud-native components to simplify the deployment of complex network architectures, significantly reducing development time and cost.
 
-[![](../images/overview1.png)](images/overview1.png) 
+[![Edge Locations](images/overview1.png)](../images/overview1.png) 
 
 The Intel® Smart Edge Open portfolio of experience kits includes:
 - **Developer Experience Kit**: Our only experience kit not designed for a specific edge location, this may be your starting point if you are new to building edge platforms. It provides the base capabilities you need to run typical containerized edge services, including networking, security, and telemetry. 
