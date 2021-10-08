@@ -33,11 +33,14 @@
         jQuery(document).ready(function(){
             jQuery('.article-content .link-primary a').each(function(e){
                 var url = jQuery(this).attr('href');
-                url = url.replace(".md", "/");
                 if(typeof url != 'undefined'){
                     var urlFound = url.indexOf(base_url);
-                    if(urlFound != '-1'){
-                        jQuery(this).attr('href',base_url+url);
+                    if(urlFound == '-1'){
+                        //Remove .md From href
+                        url = url.replace(".md", "/");
+                        var new_url = base_url+url;
+                        console.log(new_url);
+                        jQuery(this).attr('href',new_url);
                     }
                     /*var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
