@@ -37,7 +37,8 @@
                     var urlFound = url.indexOf(base_url);
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
-                    if(urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1'){
+                    var hashCheck = url.indexOf('#');
+                    if(urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && hashCheck == '-1'){
                         //Check Image
                         var checkImage = url.split('/');
                         //Remove .md From href
