@@ -10,7 +10,7 @@ description:        Documentation
 lang:               en
 
 # Site subpath, e.g. /blog
-baseurl:            "/docs"
+baseurl:            "https://onsumaye-team.github.io/docs"
 
 
 apiURL: "https://openness-staging.onsumaye.com"
