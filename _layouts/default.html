@@ -37,17 +37,22 @@
                     var urlFound = url.indexOf(base_url);
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
-                    console.log("http : "+httpUrl + " https : "+ httpsUrl);
                     if(urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1'){
+                        //Check Image
+                        var checkImage = url.split('/');
                         //Remove .md From href
                         url = url.replace(".md", "/");
-                        var new_url = base_url+url;
+                        var new_url = "";
+                        if(typeof checkImage[0] != 'undefined' && checkImage[0] == 'images'){
+                            new_url = base_url+"/"+url;
+                        }else{
+                            new_url = base_url+url;
+                        }
                         console.log(new_url);
                         jQuery(this).attr('href',new_url);
                     }
                     /*var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
-
                     if(urlFound != '-1'){
                         jQuery(this).attr('href','nofollow');
                     }else if(httpUrl != '-1' || httpsUrl != '-1'){
