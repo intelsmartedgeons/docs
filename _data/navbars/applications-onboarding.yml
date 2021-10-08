@@ -4,6 +4,6 @@ order: 5
 section:
   #- title: Onboarding Applications to an Intel® Smart Edge Open Single-Node Cluster
   - title: Onboarding Applications (Open)
-    path: {{site.main_url}}/docs/application-onboarding/application-onboarding-cmdline
+    path: https://onsumaye-team.github.io/docs/application-onboarding/application-onboarding-cmdline
     meta_title: 
     meta_description: 
