@@ -33,8 +33,8 @@
         jQuery(document).ready(function(){
             jQuery('.article-content .link-primary a').each(function(e){
                 var url = jQuery(this).attr('href');
-                var split_url = url.split(".");
-                console.log(split_url);
+                url = url.replace(".md", "/");
+                console.log(url);
                 if(typeof url != 'undefined'){
                     var urlFound = url.indexOf(base_url);
                     /*var httpUrl = url.indexOf('http://');
