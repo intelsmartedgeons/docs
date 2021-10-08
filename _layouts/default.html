@@ -37,12 +37,12 @@
                     var urlFound = url.indexOf(base_url);
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
-
+                    console.log(httpUrl + " : "+ httpsUrl);
                     if(urlFound == '-1' && (httpUrl == '-1' || httpsUrl == '-1')){
                         //Remove .md From href
                         url = url.replace(".md", "/");
                         var new_url = base_url+url;
-                        console.log(new_url);
+                        //console.log(new_url);
                         jQuery(this).attr('href',new_url);
                     }
                     /*var httpUrl = url.indexOf('http://');
