@@ -33,14 +33,15 @@
         jQuery(document).ready(function(){
             jQuery('.article-content .link-primary a').each(function(e){
                 var url = jQuery(this).attr('href');
+                var split_url = url.split(".");
+                console.log(split_url);
                 if(typeof url != 'undefined'){
                     var urlFound = url.indexOf(base_url);
-                    console.log(urlFound);
-                    var httpUrl = url.indexOf('http://');
+                    /*var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
 
-                    /*if(urlFound != '-1'){
-                        jQuery(this).attr('rel','nofollow');
+                    if(urlFound != '-1'){
+                        jQuery(this).attr('href','nofollow');
                     }else if(httpUrl != '-1' || httpsUrl != '-1'){
                         jQuery(this).attr('rel','nofollow');
                     }*/
