@@ -50,9 +50,13 @@
                             new_url = (url.startsWith("/") == true)?base_url+url:base_url+"/"+url;
                         }
                         console.log(url);
-                        jQuery(this).attr('href',new_url);
+                        jQuery(this).attr('href', new_url);
                     }else{
-                        jQuery(this).attr('href', url.replace(".md", "/"));
+                        if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
+                            jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
+                        }else{
+                            jQuery(this).attr('href', url.replace(".md", "/"));
+                        }
                     }
                 }
             });
