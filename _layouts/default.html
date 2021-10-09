@@ -51,6 +51,8 @@
                         }
                         console.log(url);
                         jQuery(this).attr('href',new_url);
+                    }else{
+                        jQuery(this).attr('href', url.replace(".md", "/"));
                     }
                 }
             });
