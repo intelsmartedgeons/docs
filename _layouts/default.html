@@ -52,14 +52,20 @@
                             }
                             new_url = (url.startsWith("/") == true)?base_url+url:base_url+"/"+url;
                         }
+                        //New Url Log
                         console.log(url);
+                        //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
                         /*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
                             jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
-                        }else{*/
+                        }else{
                             jQuery(this).attr('href', url.replace(".md", "/"));
-                        //}
+                        }*/
+                        if(httpUrl == '-1' && httpsUrl == '-1' && hashCheck != '-1'){
+                            //Remove .md From href
+                            jQuery(this).attr('href', url.replace(".md", "/"));
+                        }
                     }
                 }
             });
