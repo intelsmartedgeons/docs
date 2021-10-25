@@ -21,6 +21,7 @@
         {% if pagePath == cur_path %}
           {% for crumb in crumbs offset: 1 %}
             {% if site.baseurl == '/docs' %}
+              {{ forloop.last }}
               {% if forloop.last %}
                 > {{ breadcrumb.title }}
               {% else %}
