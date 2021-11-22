@@ -38,7 +38,6 @@
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
                     var hashCheck = url.indexOf('#');
-                    var blobMain = url.indexOf('/blob/main/');
                     if(urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && hashCheck == '-1'){
                         //Check Image
                         var checkImage = url.split('/');
@@ -64,6 +63,9 @@
                             //Remove .md From href
                             if(url.indexOf('/blob/main') != '-1'){
                                 url = url.replace("/blob/main", "");
+                                if(url.indexOf('https://github.com/smart-edge-open') != '-1'){
+                                    url = url.replace("https://github.com/smart-edge-open", "");
+                                }
                                 jQuery(this).attr('href', url.replace(".md", "/"));
                             }else{
                                 jQuery(this).attr('href', url.replace(".md", "/"));
