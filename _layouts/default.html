@@ -59,13 +59,8 @@
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-                        /*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
-                            jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
-                        }else{
-                            jQuery(this).attr('href', url.replace(".md", "/"));
-                        }*/
                         console.log("Second : "+url+" : "+httpUrl+" : "+hashCheck+" : "+httpsUrl);
-                        if((httpUrl == '-1' || httpsUrl == '-1') && hashCheck != '-1'){
+                        if((httpUrl == '-1' || httpUrl != '-1') && (httpsUrl == '-1' || httpsUrl != '-1') && hashCheck != '-1'){
                             //Remove .md From href
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }
