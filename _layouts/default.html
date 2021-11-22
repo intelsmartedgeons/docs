@@ -55,7 +55,7 @@
                             new_url = (url.startsWith("/") == true)?base_url+url:base_url+"/"+url;
                         }
                         //New Url Log
-                        console.log(url);
+                        console.log("First : "+url);
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
@@ -64,6 +64,7 @@
                         }else{
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }*/
+                        console.log("Second : "+url);
                         if(httpUrl == '-1' && httpsUrl == '-1' && hashCheck != '-1'){
                             //Remove .md From href
                             jQuery(this).attr('href', url.replace(".md", "/"));
