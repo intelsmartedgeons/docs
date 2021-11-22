@@ -67,7 +67,7 @@ You will need two machines: a provisioning system where you will build a bootabl
 - Network adapters: Two NICs, one connected to each socket
 - Connection to the provisioning system
 
-[View full specs](https://github.com/smart-edge-open/docs/blob/main/release-notes/release-notes-se-open-DEK-21-09.md) of the system the Developer Experience Kit has been validated on. 
+[View full specs](/release-notes/release-notes-se-open-DEK-21-09.md) of the system the Developer Experience Kit has been validated on. 
 
 > NOTE: The provisioning process will install Ubuntu 20.04 on the target machine. Any existing operating system will be overwritten.
 
