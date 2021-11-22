@@ -38,7 +38,6 @@
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
                     var hashCheck = url.indexOf('#');
-                    var blob = url.indexOf('blob');
                     if(urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && hashCheck == '-1'){
                         //Check Image
                         var checkImage = url.split('/');
@@ -61,6 +60,8 @@
                         jQuery(this).attr('href', new_url);
                     }else{
                         if(hashCheck != '-1'){
+                            //New Url Log
+                            console.log(url);
                             console.log("Blob Main New : "+blob);
                             //Remove .md From href
                             if(url.indexOf('/blob/main') != '-1'){
