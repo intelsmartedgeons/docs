@@ -60,14 +60,10 @@
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-                        if(hashCheck == '-1'){
-                            //New Url Log
-                            console.log(url);
-                            console.log("Blob Main New : "+blobMain);
+                        if(hashCheck == '-1' || hashCheck != '-1'){
                             //Remove .md From href
                             if(url.indexOf('/blob/main') != '-1'){
                                 url = url.replace("/blob/main", "");
-                                console.log("Complete Url : "+url.replace(".md", "/"));
                                 jQuery(this).attr('href', url.replace(".md", "/"));
                             }else{
                                 jQuery(this).attr('href', url.replace(".md", "/"));
