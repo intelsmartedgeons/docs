@@ -60,6 +60,7 @@
                         jQuery(this).attr('href', new_url);
                     }else{
                         if(hashCheck != '-1'){
+                            console.log(url.indexOf('/blob/main'));
                             //Remove .md From href
                             if(url.indexOf('/blob/main') != '-1'){
                                 url = url.replace("/blob/main", "");
