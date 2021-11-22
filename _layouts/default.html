@@ -38,6 +38,7 @@
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
                     var hashCheck = url.indexOf('#');
+                    var blobMain = url.indexOf('/blob/main/');
                     if(urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && hashCheck == '-1'){
                         //Check Image
                         var checkImage = url.split('/');
@@ -62,7 +63,7 @@
                         if(hashCheck != '-1'){
                             //New Url Log
                             console.log(url);
-                            console.log("Blob Main New : "+blob);
+                            console.log("Blob Main New : "+blobMain);
                             //Remove .md From href
                             if(url.indexOf('/blob/main') != '-1'){
                                 url = url.replace("/blob/main", "");
