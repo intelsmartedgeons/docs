@@ -55,11 +55,11 @@
                             new_url = (url.startsWith("/") == true)?base_url+url:base_url+"/"+url;
                         }
                         //New Url Log
-                        console.log("First : "+url);
+                        console.log("First : "+url + "New Generate Url :"+new_url);
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-                        console.log("Second : "+url+" : "+httpUrl+" : "+hashCheck+" : "+httpsUrl);
+                        //console.log("Second : "+url+" : "+httpUrl+" : "+hashCheck+" : "+httpsUrl);
                         if(hashCheck == '-1'){
                             //Remove .md From href
                             jQuery(this).attr('href', url.replace(".md", "/"));
