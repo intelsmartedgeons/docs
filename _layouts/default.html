@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+SPDX-License-Identifier: Apache-2.0
+Copyright (c) 2021 Intel Corporation
+-->
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
     {% include head.html %}
@@ -55,7 +59,7 @@
                             new_url = (url.startsWith("/") == true)?base_url+url:base_url+"/"+url;
                         }
                         //New Url Log
-                        console.log(url);
+                        //console.log(url);
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
@@ -68,17 +72,15 @@
                             //Remove .md From href
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }*/
-                        if(hashCheck == '-1' || hashCheck != '-1'){
-                            //Remove .md From href
-                            if(url.indexOf('/blob/main') != '-1'){
-                                url = url.replace("/blob/main", "");
-                                if(url.indexOf('https://github.com/smart-edge-open') != '-1'){
-                                    url = url.replace("https://github.com/smart-edge-open", "");
-                                }
-                                jQuery(this).attr('href', url.replace(".md", "/"));
-                            }else{
-                                jQuery(this).attr('href', url.replace(".md", "/"));
+                        //Remove .md From href
+                        if(url.indexOf('/blob/main') != '-1'){
+                            url = url.replace("/blob/main", "");
+                            if(url.indexOf('https://github.com/smart-edge-open') != '-1'){
+                                url = url.replace("https://github.com/smart-edge-open", "");
                             }
+                            jQuery(this).attr('href', url.replace(".md", "/"));
+                        }else{
+                            jQuery(this).attr('href', url.replace(".md", "/"));
                         }
                     }
                 }
