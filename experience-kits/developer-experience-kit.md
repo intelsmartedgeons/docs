@@ -5,7 +5,7 @@ Copyright (c) 2021 Intel Corporation
 
 # Intel® Smart Edge Open Developer Experience Kit
 
-## Overview
+## Overview New
 
 Intel® Smart Edge Open experience kits provide customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, experience kits let you deliver AI, video, and other services optimized for performance at the edge.
 
