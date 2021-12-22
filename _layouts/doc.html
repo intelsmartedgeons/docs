@@ -31,7 +31,7 @@ Copyright (c) 2021 Intel Corporation
                             </div><!-- omit in toc -->
                             <div class="collapsedArea">
                                 {% assign navigations = "" | split:"|" %}
-                                {% for navbars_data in site.data.navbars %}
+                                {% for navbars_data in site.main_url.data.navbars %}
                                 {% assign nav = navbars_data[1] %}
                                 {% assign navigations = navigations | push: nav %}
                                 {% if pageName == nav.path %}
