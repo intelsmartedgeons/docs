@@ -23,7 +23,7 @@
                             </div><!-- omit in toc -->
                             <div class="collapsedArea">
                                 {% assign navigations = "" | split:"|" %}
-                                {% for navbars_data in site.main_url._data.navbars %}
+                                {% for navbars_data in site.data.navbars %}
                                 {% assign nav = navbars_data[1] %}
                                 {% assign navigations = navigations | push: nav %}
                                 {% if pageName == nav.path %}
@@ -40,7 +40,7 @@
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}
                                     {% assign doc_url = nav.path | append:"/" %}
-                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}">{{ nav.title }} {{ site.main_url }}</a></li>
+                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}">{{ nav.title }}</a></li>
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
