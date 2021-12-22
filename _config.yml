@@ -90,4 +90,4 @@ defaults:
     values:
       layout:       doc
 
-  source: https://onsumaye-team.github.io/_data
+source: https://onsumaye-team.github.io/_data
