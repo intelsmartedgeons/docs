@@ -39,11 +39,11 @@ Copyright (c) 2021 Intel Corporation
 
 ## Architecture
 
-<img src="images/SGX-integration-with-DEK-design.png" style="zoom:100%;" />
+[![SGX integration with DEK design](images/SGX-integration-with-DEK-design.png)](images/SGX-integration-with-DEK-design.png)
 
 ### Sequential deployment workflow showing flow of credentials/certificates
 
-<img src="images/SGX-provisioning-seq-diagram.png" style="zoom:100%;" />
+[![SGX provisioning seq diagram](images/SGX-provisioning-seq-diagram.png)](images/SGX-provisioning-seq-diagram.png)
 
 ## How To
 ### Enable Intel SGX in BIOS
