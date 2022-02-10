@@ -6,6 +6,9 @@ section:
       path: /docs/components/resource-management/core-pinning
       meta_title: 
       meta_description: 
+      section:
+          - title: Open Open
+            path: /docs/components/resource-management/core-pinning
       
     - title: Node Feature Discovery
       path: /docs/components/resource-management/node-feature-discovery
