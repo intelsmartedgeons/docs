@@ -9597,7 +9597,7 @@ function contactformsubmit() {
         }
     });
 }*/
-
+/**/
 jQuery(document).ready(function() {
     jQuery('.collapsedArea ul li > span').on('click', function(){
         if(jQuery(this).next('ul').is(':visible')){
