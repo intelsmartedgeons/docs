@@ -9598,7 +9598,7 @@ function contactformsubmit() {
     });
 }*/
 
-/* Hello */
+/* Hellooo */
 jQuery(document).ready(function() {
     alert('hello');
     jQuery('.collapsedArea ul li > span').on('click', function(){
