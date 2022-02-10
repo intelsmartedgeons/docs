@@ -53,13 +53,15 @@
                                         {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                         {% for nav in navbar.section %}
                                         {% assign doc_url = nav.path | append:"/" %}
-                                        <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}"><span>{{ nav.title }}</span></a></li>
                                         {% if nav.section != '' %}
+                                        <li><span><h5>{{ nav.title }}</h5></span></li>
                                         <ul>
                                             {% for nested_nav in nav.section %}
                                             <li><span>{{ nested_nav.title }}</span></li>
                                             {% endfor %}
                                         </ul>
+                                        {% else %}
+                                        <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}"><span><h5>{{ nav.title }}</h5></span></a></li>
                                         {% endif %}
                                         {% endfor %}
                                         </ul>
