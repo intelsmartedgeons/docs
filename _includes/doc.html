@@ -33,7 +33,7 @@
                                 {% endif %}
                                 {% endfor %}
                                 {% assign navbars = navigations | sort:"order" %}
-                                {% comment %}
+                                
                                 {% for navbar in navbars %}
                                     <h5>{{ navbar.title }}</h5>
                                     <ul class="uk-nav uk-nav-default doc-nav">
@@ -44,7 +44,8 @@
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
-                                {% endcomment %}
+                                
+                                {% comment %}
                                 <ul>
                                 {% for navbar in navbars %}
                                     <li>
@@ -68,6 +69,7 @@
                                     </li>
                                 {% endfor %}
                                 </ul>
+                                {% endcomment %}
                             </div>
                         </div>
                     </div>
