@@ -103,6 +103,17 @@
                         duration: 400,
                         offset: 120
                     });
+                    $(document).ready(function(){
+                        $('li > span').on('click', function(){
+                            if($(this).next('ul').is(':visible')){
+                                $(this).next('ul').slideUp();
+                                $(this).parent('li').removeClass('openList');
+                            }else{
+                                $(this).next('ul').slideDown();
+                                $(this).parent('li').addClass('openList');
+                            }
+                        });
+                    });
                 </script>
 
             </div>
