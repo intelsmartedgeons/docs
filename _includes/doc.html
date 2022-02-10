@@ -57,6 +57,11 @@
                                         {% else %}
                                         <h5>{{ navbar.title }}</h5>
                                         {% endif %}
+                                        <ul class="uk-nav uk-nav-default doc-nav">
+                                            {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
+                                            {% for nav in navbar.section %}
+                                            {% assign doc_url = nav.path | append:"/" %}
+                                        </ul>
                                     </li>
                                 {% endfor %}
                                 </ul>
@@ -104,19 +109,7 @@
                         duration: 400,
                         offset: 120
                     });
-                    $(document).ready(function(){
-                        $('li > span').on('click', function(){
-                            if($(this).next('ul').is(':visible')){
-                                $(this).next('ul').slideUp();
-                                $(this).parent('li').removeClass('openList');
-                            }else{
-                                $(this).next('ul').slideDown();
-                                $(this).parent('li').addClass('openList');
-                            }
-                        });
-                    });
                 </script>
-
             </div>
     </div>
 </div>
