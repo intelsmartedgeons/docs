@@ -9598,20 +9598,7 @@ function contactformsubmit() {
     });
 }*/
 
-/* Hello */
 jQuery(document).ready(function() {
-    alert('hello');
-    jQuery('.collapsedArea ul li > span').on('click', function(){
-        if(jQuery(this).next('ul').is(':visible')){
-            jQuery(this).next('ul').slideUp();
-            jQuery(this).parent('li').removeClass('openList');
-        }
-        else{
-            jQuery(this).next('ul').slideDown();
-            jQuery(this).parent('li').addClass('openList');
-        }
-    });
-    
     jQuery("input[name='existing_member']").click(function() {
         if (jQuery("input:radio[name=existing_member]:checked").val() == "yes") {
             $(".cn-no").hide();
@@ -9629,7 +9616,19 @@ jQuery(document).ready(function() {
             $(".cn-no").hide();
             $(".cn-yes").hide();
         }
-    }); 
+    });
+
+    /* Hello new file */
+    jQuery('.collapsedArea ul li > span').on('click', function(){
+        if(jQuery(this).next('ul').is(':visible')){
+            jQuery(this).next('ul').slideUp();
+            jQuery(this).parent('li').removeClass('openList');
+        }
+        else{
+            jQuery(this).next('ul').slideDown();
+            jQuery(this).parent('li').addClass('openList');
+        }
+    });
 });
 
 
