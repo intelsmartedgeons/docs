@@ -36,7 +36,7 @@
                                 
                                 {% for navbar in navbars %}
                                     {% if(navbar.tags != '' && navbar.tags == 'span') %}
-                                    <{{ navbar.tags }}><h5>{{ navbar.title }}</h5></{{ navbar.tags }}>
+                                    <span><h5>{{ navbar.title }}</h5></span>
                                     {% else %}
                                     <h5>{{ navbar.title }}</h5>
                                     {% endif %}
