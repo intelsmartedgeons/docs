@@ -33,7 +33,7 @@
                                 {% endif %}
                                 {% endfor %}
                                 {% assign navbars = navigations | sort:"order" %}
-                                
+                                {% comment %}
                                 {% for navbar in navbars %}
                                     <h5>{{ navbar.title }}</h5>
                                     <ul class="uk-nav uk-nav-default doc-nav">
@@ -44,6 +44,21 @@
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
+                                {% endcomment %}
+                                <ul>
+                                {% for navbar in navbars %}
+                                    <li>
+                                        <span><h5>{{ navbar.title }}</h5></span>
+                                        <ul class="uk-nav uk-nav-default doc-nav">
+                                        {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
+                                        {% for nav in navbar.section %}
+                                        {% assign doc_url = nav.path | append:"/" %}
+                                        <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}"><span>{{ nav.title }}</span></a></li>
+                                        {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                                </ul>
                             </div>
                         </div>
                     </div>
