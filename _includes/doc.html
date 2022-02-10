@@ -35,7 +35,11 @@
                                 {% assign navbars = navigations | sort:"order" %}
                                 
                                 {% for navbar in navbars %}
+                                    {% if(navbar.tags != '' && navbar.tags == 'span') %}
+                                    <{{ navbar.tags }}><h5>{{ navbar.title }}</h5></{{ navbar.tags }}>
+                                    {% else %}
                                     <h5>{{ navbar.title }}</h5>
+                                    {% endif %}
                                     <ul class="uk-nav uk-nav-default doc-nav">
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}
