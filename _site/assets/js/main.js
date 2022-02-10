@@ -9630,8 +9630,11 @@ jQuery(window).on('load', function(){
     })
     var pathname = window.location.pathname;
     if(pathname.includes('/docs/')){
-jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
+        jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
     }
+    jQuery('.sidebar-docs .leftSection .collapsedArea h5').on('click', function(){
+        jQuery(this).next('ul').slideToggle();
+    })
 })
 jQuery(window).on('resize', function(){
     if(jQuery(window).width() >= 960){

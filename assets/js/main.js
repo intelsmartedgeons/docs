@@ -9599,6 +9599,16 @@ function contactformsubmit() {
 }*/
 
 jQuery(document).ready(function() {
+    jQuery('.collapsedArea ul li > span').on('click', function(){
+        if(jQuery(this).next('ul').is(':visible')){
+            jQuery(this).next('ul').slideUp();
+            jQuery(this).parent('li').removeClass('openList');
+        }
+        else{
+            jQuery(this).next('ul').slideDown();
+            jQuery(this).parent('li').addClass('openList');
+        }
+    })
     jQuery("input[name='existing_member']").click(function() {
         if (jQuery("input:radio[name=existing_member]:checked").val() == "yes") {
             $(".cn-no").hide();
@@ -9630,8 +9640,11 @@ jQuery(window).on('load', function(){
     })
     var pathname = window.location.pathname;
     if(pathname.includes('/docs/')){
-jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
+        jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
     }
+    jQuery('.sidebar-docs .leftSection .collapsedArea h5').on('click', function(){
+        jQuery(this).next('ul').slideToggle();
+    })
 })
 jQuery(window).on('resize', function(){
     if(jQuery(window).width() >= 960){

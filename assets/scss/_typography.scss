@@ -21,11 +21,7 @@ h3{
     letter-spacing: 0.8px;
     color: $black;
     margin: 0 auto 20px;
-}/* 
-.headLine{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-} */
+}
 p{
     margin: 0 auto 20px;
     clear: both;
@@ -37,6 +33,9 @@ ul, li{
     clear: both;
     word-break: break-word;
 }
+ul > li > ul{
+    margin-bottom: 0 !important;
+}
 svg, svg *{
     color: $blue;
 }
@@ -44,7 +43,7 @@ svg, svg *{
     font: 20px/26px 'Intel One Display Light';
     color: $menuColor;
     letter-spacing: 0.5px;
-    max-width: 70%;
+    max-width: 72%;
     margin: 0 auto;
 }
 a{
@@ -57,6 +56,20 @@ a{
         color: $blue;
     }
 }
+.overlay{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    display: none;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
 .uk-button-primary{
     background-color: $blue;
     transition: 0.3s;
@@ -64,8 +77,19 @@ a{
         background-color: darken($blue, 10%);
     }
 }
-.uk-article-title{
+.uk-article-title:not(.blog-title){
     display: none;
+}
+pre code{
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    *{
+        font-family: monospace, Arial, Helvetica, sans-serif;
+        font-size: 16px; 
+    }
+}
+:not(pre)>code, :not(pre)>kbd, :not(pre)>samp{
+    color: #00c7fd;
 }
 @media (max-width:1199px){
     *{

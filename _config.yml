@@ -21,7 +21,8 @@ permalink:          /:title/
 # Site base hostname & protocol, e.g. http://example.com
 
 url:                ""
-main_url:           "https://onsumaye-team.github.io"
+#main_url:           "https://onsumaye-team.github.io"
+main_url:           "http://onsumaye-team.localhost.com"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               
@@ -90,4 +91,4 @@ defaults:
     values:
       layout:       doc
 
-source: https://onsumaye-team.github.io/_data
+source: 
