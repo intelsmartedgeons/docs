@@ -9618,7 +9618,6 @@ jQuery(document).ready(function() {
         }
     });
 
-    /* Hello new file */
     jQuery('.collapsedArea ul li > span').on('click', function(){
         if(jQuery(this).next('ul').is(':visible')){
             jQuery(this).next('ul').slideUp();
