@@ -52,7 +52,7 @@
                                 <ul>
                                 {% for navbar in navbars %}
                                     <li>
-                                        {% if navbar.tags != '' && navbar.tags == 'span' %}
+                                        {% if navbar.section %}
                                         <span><h5>{{ navbar.title }}</h5></span>
                                         {% else %}
                                         <h5>{{ navbar.title }}</h5>
