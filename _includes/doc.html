@@ -33,6 +33,7 @@
                                 {% endif %}
                                 {% endfor %}
                                 {% assign navbars = navigations | sort:"order" %}
+                                {% comment %}
                                 {% for navbar in navbars %}
                                     {% if navbar.tags != '' && navbar.tags == 'span' %}
                                     <span><h5>{{ navbar.title }}</h5></span>
@@ -47,6 +48,29 @@
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
+                                {% endcomment %}
+                                <ul>
+                                {% for navbar in navbars %}
+                                    <li>
+                                        {% if navbar.tags != '' && navbar.tags == 'span' %}
+                                        <span><h5>{{ navbar.title }}</h5></span>
+                                        {% else %}
+                                        <h5>{{ navbar.title }}</h5>
+                                        {% endif %}
+                                        <ul class="uk-nav uk-nav-default doc-nav">
+                                            {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
+                                            {% for nav in navbar.section %}
+                                                {% assign doc_url = nav.path | append:"/" %}
+                                                {% if nav.section != ''%}
+                                                <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}">{{ nav.title }}</a></li>
+                                                {% else %}
+                                                <li><span>{{ nav.title }}<span></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                                </ul>
                             </div>
                         </div>
                     </div>
