@@ -9629,12 +9629,12 @@ jQuery(document).ready(function() {
         }
     }); */
     jQuery('.collapsedArea ul li').on('click', function(){
-        if(jQuery(this).child('ul').is(':visible')){
-            jQuery(this).child('ul').slideUp();
+        if(jQuery(this).children('ul').is(':visible')){
+            jQuery(this).children('ul').slideUp();
             jQuery(this).removeClass('openList');
         }
         else{
-            jQuery(this).child('ul').slideDown();
+            jQuery(this).children('ul').slideDown();
             jQuery(this).addClass('openList');
         }
     });
