@@ -9651,3 +9651,12 @@ jQuery(window).on('resize', function(){
         jQuery('#offcanvas-docs').removeClass('uk-offcanvas-overlay uk-open');
     }
 })
+jQuery(window).on('scroll', function(){
+    //console.log(jQuery(window).scrollTop())
+    if(jQuery(window).scrollTop() > 200){
+        jQuery('.collapsedArea').addClass('collapsedAreaFixed');
+    }
+    else{
+        jQuery('.collapsedArea').removeClass('collapsedAreaFixed');
+    }
+})
