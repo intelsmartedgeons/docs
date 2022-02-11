@@ -1,9 +1,8 @@
 title: "Product Overview"
 path: /docs/product-overview
 order: 0
-tags: span
 section:
-  - title: About
+  - title: Overview
     path: /docs/product-overview
     meta_title: 
     meta_description: 
