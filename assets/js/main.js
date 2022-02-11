@@ -9628,16 +9628,6 @@ jQuery(document).ready(function() {
             jQuery(this).parent('li').addClass('openList');
         }
     });
-    /* jQuery('.collapsedArea ul li').on('click', function(){
-        if(jQuery(this).children('ul').is(':visible')){
-            jQuery(this).children('ul').slideUp();
-            jQuery(this).removeClass('openList');
-        }
-        else{
-            jQuery(this).children('ul').slideDown();
-            jQuery(this).addClass('openList');
-        }
-    }); */
 });
 
 
@@ -9647,7 +9637,7 @@ function cleanString(str) {
 jQuery(window).on('load', function(){
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
-        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parent('.uk-nav').slideDown();
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
     }
    jQuery('.menuIcon').on('click', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
