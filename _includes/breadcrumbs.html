@@ -18,8 +18,8 @@
       
         {% assign crumbs = breadcrumb.path | remove:'/index.html' | split: '/' %}
         {% assign cur_path = breadcrumb.path | append:'/' %}
-        {% if pagePath == cur_path %}
         {{ pagePath }}
+        {% if pagePath == cur_path %}
           {% for crumb in crumbs offset: 1 %}
             {% if site.baseurl == '/docs' %}
               {% if forloop.last %}
