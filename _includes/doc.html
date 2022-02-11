@@ -55,7 +55,9 @@
                                     <li class="hasChild">
                                         <span>{{ navbar.title }}</span>
                                         <ul class="uk-nav uk-nav-default doc-nav">
+                                        {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                         {% for a in navbar.section %}
+                                        {% assign doc_url = a.path | append:"/" %}
                                             {% if a.section %}
                                             <li class="hasChild">
                                                 <span>{{ a.title }}</span>
@@ -76,30 +78,30 @@
                                                                             <span>{{ d.title }}</span>
                                                                             <ul class="uk-nav uk-nav-default doc-nav">
                                                                                 {% for e in d.section %}
-                                                                                <li><span>{{ e.title }}</span></li>
+                                                                                <li><span><a href="{{ e.path }}">{{ e.title }}</a></span></li>
                                                                                 {% endfor %}
                                                                             </ul>
                                                                         </li>
                                                                         {% else %}
-                                                                        <li><span>{{ d.title }}</span></li>
+                                                                        <li><span><a href="{{ d.path }}">{{ d.title }}</a></span></li>
                                                                         {% endif %}
                                                                     {% endfor %}
                                                                 </ul>
                                                             </li>
                                                             {% else %}
-                                                            <li><span>{{ c.title }}</span></li>
+                                                            <li><span><a href="{{ c.path }}">{{ c.title }}</a></span></li>
                                                             {% endif %}
                                                         {% endfor %}
                                                         </ul>
                                                     </li>
                                                     {% else %}
-                                                    <li><span>{{ b.title }}</span></li>
+                                                    <li><span><a href="{{ b.path }}">{{ b.title }}</a></span></li>
                                                     {% endif %}
                                                     {% endfor %}
                                                 </ul>
                                             </li>
                                             {% else %}
-                                            <li><span>{{ a.title }}</span></li>
+                                            <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><span><a href="{{ a.path }}">{{ a.title }}</a></span></li>
                                             {% endif %}
                                         {% endfor %}
                                         </ul>
