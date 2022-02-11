@@ -9652,8 +9652,7 @@ jQuery(window).on('resize', function(){
     }
 })
 jQuery(window).on('scroll', function(){
-    //console.log(jQuery(window).scrollTop())
-    if(jQuery(window).scrollTop() > 200){
+    if(jQuery(window).scrollTop() > 180){
         jQuery('.collapsedArea').addClass('collapsedAreaFixed');
     }
     else{
