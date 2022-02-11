@@ -9618,7 +9618,7 @@ jQuery(document).ready(function() {
         }
     });
 
-    jQuery('.collapsedArea ul li > span').on('click', function(){
+    /* jQuery('.collapsedArea ul li > span').on('click', function(){
         if(jQuery(this).next('ul').is(':visible')){
             jQuery(this).next('ul').slideUp();
             jQuery(this).parent('li').removeClass('openList');
@@ -9626,6 +9626,16 @@ jQuery(document).ready(function() {
         else{
             jQuery(this).next('ul').slideDown();
             jQuery(this).parent('li').addClass('openList');
+        }
+    }); */
+    jQuery('.collapsedArea ul li').on('click', function(){
+        if(jQuery(this).child('ul').is(':visible')){
+            jQuery(this).child('ul').slideUp();
+            jQuery(this).removeClass('openList');
+        }
+        else{
+            jQuery(this).child('ul').slideDown();
+            jQuery(this).addClass('openList');
         }
     });
 });
