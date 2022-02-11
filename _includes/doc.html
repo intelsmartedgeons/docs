@@ -63,39 +63,43 @@
                                                 <span>{{ a.title }}</span>
                                                 <ul class="uk-nav uk-nav-default doc-nav">
                                                     {% for b in a.section %}
+                                                    {% assign doc_url = b.path | append:"/" %}
                                                     {% if b.section %}
                                                     <li class="hasChild">
                                                         <span>{{ b.title }}</span>
                                                         <ul class="uk-nav uk-nav-default doc-nav">
                                                         {% for c in b.section %}
+                                                        {% assign doc_url = c.path | append:"/" %}
                                                             {% if c.section %}
                                                             <li class="hasChild">
                                                                 <span>{{ c.title }}</span>
                                                                 <ul class="uk-nav uk-nav-default doc-nav">
                                                                     {% for d in c.section %}
+                                                                    {% assign doc_url = d.path | append:"/" %}
                                                                         {% if d.section %}
                                                                         <li class="hasChild">
                                                                             <span>{{ d.title }}</span>
                                                                             <ul class="uk-nav uk-nav-default doc-nav">
                                                                                 {% for e in d.section %}
-                                                                                <li><span><a href="{{ e.path }}">{{ e.title }}</a></span></li>
+                                                                                {% assign doc_url = e.path | append:"/" %}
+                                                                                <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><span><a href="{{ e.path }}">{{ e.title }}</a></span></li>
                                                                                 {% endfor %}
                                                                             </ul>
                                                                         </li>
                                                                         {% else %}
-                                                                        <li><span><a href="{{ d.path }}">{{ d.title }}</a></span></li>
+                                                                        <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><span><a href="{{ d.path }}">{{ d.title }}</a></span></li>
                                                                         {% endif %}
                                                                     {% endfor %}
                                                                 </ul>
                                                             </li>
                                                             {% else %}
-                                                            <li><span><a href="{{ c.path }}">{{ c.title }}</a></span></li>
+                                                            <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><span><a href="{{ c.path }}">{{ c.title }}</a></span></li>
                                                             {% endif %}
                                                         {% endfor %}
                                                         </ul>
                                                     </li>
                                                     {% else %}
-                                                    <li><span><a href="{{ b.path }}">{{ b.title }}</a></span></li>
+                                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><span><a href="{{ b.path }}">{{ b.title }}</a></span></li>
                                                     {% endif %}
                                                     {% endfor %}
                                                 </ul>
