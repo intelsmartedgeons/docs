@@ -9635,6 +9635,7 @@ function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
 jQuery(window).on('load', function(){
+    jQuery('.sidebar-docs .leftSection .collapsedArea').scrollTop(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top);
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
