@@ -51,24 +51,62 @@
                                 {% endcomment %}
                                 <ul>
                                 {% for navbar in navbars %}
-                                    <li>
-                                        {% if navbar.section %}
-                                        <span><h5>{{ navbar.title }}</h5></span>
-                                        {% else %}
-                                        <h5>{{ navbar.title }}</h5>
-                                        {% endif %}
+                                    {% if navbar.section %}
+                                    <li class="hasChild">
+                                        <span>{{ navbar.title }}</span>
                                         <ul class="uk-nav uk-nav-default doc-nav">
-                                            {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
-                                            {% for nav in navbar.section %}
-                                                {% assign doc_url = nav.path | append:"/" %}
-                                                {% if nav.section %}
-                                                <li><span>{{ nav.title }}<span></li>
-                                                {% else %}
-                                                <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path }}">{{ nav.title }}</a></li>
-                                                {% endif %}
-                                            {% endfor %}
+                                        {% for a in navbar.section %}
+                                            {% if a.section %}
+                                            <li class="hasChild">
+                                                <span>{{ a.title }}</span>
+                                                <ul class="uk-nav uk-nav-default doc-nav">
+                                                    {% for b in a.section %}
+                                                    {% if b.section %}
+                                                    <li class="hasChild">
+                                                        <span>{{ b.title }}</span>
+                                                        <ul class="uk-nav uk-nav-default doc-nav">
+                                                        {% for c in b.section %}
+                                                            {% if c.section %}
+                                                            <li class="hasChild">
+                                                                <span>{{ c.title }}</span>
+                                                                <ul class="uk-nav uk-nav-default doc-nav">
+                                                                    {% for d in c.section %}
+                                                                        {% if d.section %}
+                                                                        <li class="hasChild">
+                                                                            <span>{{ d.title }}</span>
+                                                                            <ul class="uk-nav uk-nav-default doc-nav">
+                                                                                {% for e in d.section %}
+                                                                                <li><span>{{ e.title }}</span></li>
+                                                                                {% endfor %}
+                                                                            </ul>
+                                                                        </li>
+                                                                        {% else %}
+                                                                        <li><span>{{ d.title }}</span></li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            </li>
+                                                            {% else %}
+                                                            <li><span>{{ c.title }}</span></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        </ul>
+                                                    </li>
+                                                    {% else %}
+                                                    <li><span>{{ b.title }}</span></li>
+                                                    {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                            {% else %}
+                                            <li><span>{{ a.title }}</span></li>
+                                            {% endif %}
+                                        {% endfor %}
                                         </ul>
                                     </li>
+                                    {% else %}
+                                    <li><span>{{ navbar.title }}</span></li>
+                                    {% endif %}
                                 {% endfor %}
                                 </ul>
                             </div>
