@@ -9618,7 +9618,7 @@ jQuery(document).ready(function() {
         }
     });
 
-    /* jQuery('.collapsedArea ul li > span').on('click', function(){
+    jQuery('.collapsedArea ul li > span').on('click', function(){
         if(jQuery(this).next('ul').is(':visible')){
             jQuery(this).next('ul').slideUp();
             jQuery(this).parent('li').removeClass('openList');
@@ -9627,8 +9627,8 @@ jQuery(document).ready(function() {
             jQuery(this).next('ul').slideDown();
             jQuery(this).parent('li').addClass('openList');
         }
-    }); */
-    jQuery('.collapsedArea ul li').on('click', function(){
+    });
+    /* jQuery('.collapsedArea ul li').on('click', function(){
         if(jQuery(this).children('ul').is(':visible')){
             jQuery(this).children('ul').slideUp();
             jQuery(this).removeClass('openList');
@@ -9637,7 +9637,7 @@ jQuery(document).ready(function() {
             jQuery(this).children('ul').slideDown();
             jQuery(this).addClass('openList');
         }
-    });
+    }); */
 });
 
 
