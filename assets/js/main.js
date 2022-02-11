@@ -9653,9 +9653,9 @@ jQuery(window).on('resize', function(){
 })
 jQuery(window).on('scroll', function(){
     if(jQuery(window).scrollTop() >= 200){
-        jQuery('.collapsedArea').addClass('collapsedAreaFixed');
+        jQuery('.leftSection').addClass('leftSectionFixed');
     }
     else{
-        jQuery('.collapsedArea').removeClass('collapsedAreaFixed');
+        jQuery('.leftSection').removeClass('leftSectionFixed');
     }
 })
