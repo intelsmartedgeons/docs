@@ -20,6 +20,7 @@
         {% assign cur_path = breadcrumb.path | append:'/' %}
         {% if pagePath == cur_path %}
           {% for crumb in crumbs offset: 1 %}
+          {{ crumb }}
             {% if site.baseurl == '/docs' %}
               {% if forloop.last %}
                 > {{ breadcrumb.title }}
