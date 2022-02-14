@@ -33,6 +33,8 @@
                                 {% endif %}
                                 {% endfor %}
                                 {% assign navbars = navigations | sort:"order" %}
+
+                                <!-- Start Comment -->
                                 {% comment %}
                                 {% for navbar in navbars %}
                                     {% if navbar.tags != '' && navbar.tags == 'span' %}
@@ -49,6 +51,8 @@
                                     </ul>
                                 {% endfor %}
                                 {% endcomment %}
+                                <!-- End Comment -->
+
                                 <ul>
                                 {% for navbar in navbars %}
                                     {% if navbar.section %}
