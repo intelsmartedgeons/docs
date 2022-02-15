@@ -1,8 +1,9 @@
 title: "Near Edge Experience Kit"
 order: 6
-  title: "Building Blocks"
-  order: 2
-  section:
+section:
+  - title: "Building Blocks"
+    order: 2
+    section:
       - title: Inter-app Communication
         path: /ido-specs/doc/building-blocks/dataplane/smartedge-open-interapp/
         meta_title:
