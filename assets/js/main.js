@@ -9669,6 +9669,7 @@ jQuery(window).on('scroll', function(){
     }
 })
 
+
 // Added by Gaurav kumar
 jQuery(window).on('load', function(){
 	setTimeout(function(){
