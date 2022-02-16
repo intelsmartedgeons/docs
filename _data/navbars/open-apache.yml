@@ -1,70 +1,10 @@
-title: "Open - Apache 2.0"
+title: "Developer Experience Kit"
 path: /open-apache/
 order: 2
 section:
-  - title: "Experience Kits (Open)"
-    path: /experience-kits/
-    section:
-      - title: Developer
-        path: /docs/experience-kits/developer-experience-kit
-        meta_title: 
-        meta_description: 
-        section:
-          - title: Overview
-          - title: How It works
-          - title: Get Started
-          - title: Building Blocks
-            section:
-              - title: Networking
-                section: 
-                  - title: Multus CNI
-                    path: '/docs/experience-kits/developer-experience-kit'
-                    meta_title: 
-                    meta_description: 
-
-                  - title: SR-IOV
-                    path: '/docs/experience-kits/developer-experience-kit'
-                    meta_title: 
-                    meta_description:
-
-  - title: "Building Blocks (Open)"
-    path: /building-blocks/
-    section:
-        - title: Core Pinning
-          path: /docs/components/resource-management/core-pinning
-          meta_title: 
-          meta_description: 
-          
-        - title: Node Feature Discovery
-          path: /docs/components/resource-management/node-feature-discovery
-          meta_title: 
-          meta_description: 
-          
-        - title: Multus
-          path: /docs/components/networking/multus
-          meta_title: 
-          meta_description: 
-          
-        - title: SR-IOV Network Operator
-          path: /docs/components/networking/sriov-network-operator
-          meta_title: 
-          meta_description: 
-          
-        - title: Topology Manager
-          path: /docs/components/resource-management/topology-manager
-          meta_title: 
-          meta_description: 
-          
-        - title: Telemetry
-          path: /docs/components/telemetry/telemetry
-          meta_title: 
-          meta_description: 
-          
-  - title: "Application Onboarding (Open)"
-    path: /applications-onboard/
-    order: 5
-    section:
-      - title: Onboarding Applications (Open)
-        path: /docs/application-onboarding/application-onboarding-cmdline
-        meta_title: 
-        meta_description: 
+  - title: "Overview"
+    path: /docs/experience-kits/developer-experience-kit/#Overview
+  - title: "How it works"
+    path: /docs/experience-kits/developer-experience-kit/#howitworks
+  - title: "Get Started"
+    path: /docs/experience-kits/developer-experience-kit/#getstarted
