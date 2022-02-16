@@ -9634,7 +9634,7 @@ jQuery(document).ready(function() {
 function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
-jQuery(document).ready(function() {
+jQuery(window).on('load', function(){
     setTimeout(function(){
         jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
             scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
@@ -9677,7 +9677,7 @@ jQuery(window).on('load', function(){
 		let nodeList = '';
 		allActiveTabs.forEach(function(activeTab, i) {
 			nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
-			console.log(nodeList);
+			//console.log(nodeList);
 		});
 		breadcrumbs.insertAdjacentHTML("beforeend", nodeList);
 
