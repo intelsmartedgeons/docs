@@ -1,0 +1,70 @@
+title: "Secure Access Service Edge Experience Kit"
+path: /experience-kits/
+order: 5
+section:
+  - title: "Getting Started"
+    section:
+      - title: "Cluster Setup"
+        path: /doc/getting-started/smartedge-open-cluster-setup
+      - title: "Converged Edge Experience Kits"
+        path: /doc/getting-started/converged-edge-experience-kits
+      - title: "Offline Deployment"
+        path: /doc/getting-started/offline-edge-deployment
+      - title: "Non-root User"
+        path: /doc/getting-started/non-root-user
+      - title: "Harbor Registry Service"
+        path: /doc/getting-started/harbor-registry
+      - title: "Kubernetes Dashboard"
+        path: /doc/getting-started/kubernetes-dashboard
+  - title: "Building Blocks"
+    section:
+      - title: "Inter-app Communication"
+        path: /doc/building-blocks/dataplane/smartedge-open-interapp
+      - title: "OVN/OVS"
+        path: /doc/building-blocks/dataplane/smartedge-open-ovn
+      - title: "Userspace CNI"
+        path: /doc/building-blocks/dataplane/smartedge-open-userspace-cni
+      - title: "Hugepage"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-hugepage
+      - title: "Node Feature Discovery"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-node-feature-discovery
+      - title: "Multiple Interface & PCIe SRIOV"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-sriov-multiple-interfaces
+      - title: "Dedicated CPU Core"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-dedicated-core
+      - title: "BIOS & Firmware Configuration"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-bios
+      - title: "FPGA Support"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-fpga
+      - title: "Intel® vRAN Dedicated Accelerator ACC100"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-acc100
+      - title: "Intel® Movidius™ Myriad™ X HDDL"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open_hddl
+      - title: "Visual Compute Accelerator Card - Analytics (VCA-A)"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-vcac-a
+      - title: "Intel QuickAssist Adapter"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-qat
+      - title: "Topology Manager"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-topology-manager
+      - title: "Telemetry"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-telemetry
+      - title: "Resource Management Daemon"
+        path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-rmd
+      - title: "Edge Multi-Cluster Orchestrator"
+        path: /doc/building-blocks/emco/smartedge-open-emco/
+  - title: "Application Onboarding"
+    section:
+      - title: "Network Edge Application Onboarding"
+        path: /doc/applications-onboard/network-edge-applications-onboarding
+      - title: "Edge DNS"
+        path: /doc/applications-onboard/smartedge-open-edgedns
+      - title: "Edge Application Agent (EAA)"
+        path: /doc/applications-onboard/smartedge-open-eaa
+      - title: "Certificate Signing"
+        path: /doc/applications-onboard/smartedge-open-certsigner
+      - title: "Interface Service"
+        path: /doc/applications-onboard/smartedge-open-interface-service
+      - title: "VM Support"
+        path: /doc/applications-onboard/smartedge-open-network-edge-vm-support
+      - title: "Core Network Configuration Agent (CNCA)"
+        path: /doc/applications-onboard/using-smartedge-open-cnca                                      
