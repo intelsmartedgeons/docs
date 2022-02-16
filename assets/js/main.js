@@ -2,7 +2,7 @@ var pathname = window.location.pathname;
 if(pathname.includes('/docs/')){
     jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
     jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
-    jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.ul').show();
+    jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('ul').show();
 }
 /* if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
     
