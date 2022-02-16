@@ -9679,8 +9679,6 @@ jQuery(window).on('load', function(){
 			nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
 			//console.log(nodeList);
 		});
-		const activeChild =	document.querySelector('.uk-active').firstElementChild.innerHTML;
-		nodeList          = nodeList+" > "+activeChild; 
 		breadcrumbs.insertAdjacentHTML("beforeend", nodeList);
 
 	}, 10)
