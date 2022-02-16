@@ -18,7 +18,7 @@ section:
             meta_title: 
             meta_description: 
           - title: "SR-IOV FEC Operator"
-            path: /doc/building-blocks/enhanced-platform-awareness/smartedge-open-acc100
+            path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-acc100
             meta_title: 
             meta_description:  
           - title: "Multus CNI"
