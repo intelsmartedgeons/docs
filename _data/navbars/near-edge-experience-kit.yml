@@ -8,32 +8,26 @@ section:
         path: /ido-specs/doc/getting-started/smartedge-open-cluster-setup/
         meta_title:
         meta_description: 
-        
       - title: Converged Edge Experience Kits
         path: /ido-specs/doc/getting-started/converged-edge-experience-kits/
         meta_title: 
         meta_description:
-
       - title: Offline Deployment
         path: /ido-specs/doc/getting-started/offline-edge-deployment/
         meta_title:
-        meta_description: 
-        
+        meta_description:
       - title: Non-root User
         path: /ido-specs/doc/getting-started/non-root-user/
         meta_title: 
         meta_description:
-
       - title: Harbor Registry Service
         path: /ido-specs/doc/getting-started/harbor-registry/
         meta_title:
-        meta_description: 
-        
+        meta_description:
       - title: Kubernetes
         path: /ido-specs/doc/getting-started/kubernetes-dashboard/
         meta_title: 
         meta_description:
-
   - title: "Building Blocks"
     order: 2
     section:
@@ -121,9 +115,7 @@ section:
         path: /ido-specs/doc/building-blocks/emco/smartedge-open-emco/
         meta_title:
         meta_description: 
-
-
-    - title: "Application Onboarding"
+  - title: "Application Onboarding"
     order: 3
     section:
       - title: Network Edge Application Onboarding

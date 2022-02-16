@@ -9677,7 +9677,7 @@ jQuery(window).on('load', function(){
 		let nodeList = '';
 		allActiveTabs.forEach(function(activeTab, i) {
 			nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
-			console.log(nodeList);
+			//console.log(nodeList);
 		});
 		breadcrumbs.insertAdjacentHTML("beforeend", nodeList);
 
