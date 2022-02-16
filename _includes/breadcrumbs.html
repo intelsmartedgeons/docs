@@ -12,6 +12,7 @@
   {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
   <a href="{{ site.main_url }}">Home</a> >
   {% comment %}
+  {{ 'Hello' }}
   {% if pageTitleUpper != 'index.html' %}
     {% assign pagePath = page.path | remove: ".md" | prepend:"/" | prepend: site.baseurl | append:'/' %}
     {% for navbar in navbars %}
@@ -39,5 +40,5 @@
       {% endfor %}
     {% endfor %}
   {% endif %}
-  {% comment %}
+  {% endcomment %}
 </div>
