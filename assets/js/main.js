@@ -1,12 +1,3 @@
-var pathname = window.location.pathname;
-if(pathname.includes('/docs/')){
-    jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
-    jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
-    jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('ul').show();
-}
-/* if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
-    
-} */
 (function(global, factory) {
     typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() : typeof define === "function" && define.amd ? define("uikit", factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, 
     global.UIkit = factory());
@@ -9606,6 +9597,7 @@ function contactformsubmit() {
         }
     });
 }*/
+
 jQuery(document).ready(function() {
     jQuery("input[name='existing_member']").click(function() {
         if (jQuery("input:radio[name=existing_member]:checked").val() == "yes") {
@@ -9648,9 +9640,17 @@ jQuery(window).on('load', function(){
             scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
         });
     }, 1000)
+    if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
+    }
    jQuery('.menuIcon').on('click', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
     })
+    var pathname = window.location.pathname;
+    if(pathname.includes('/docs/')){
+        jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
+    }
     jQuery('.sidebar-docs .leftSection .collapsedArea h5').on('click', function(){
         jQuery(this).next('ul').slideToggle();
     })
@@ -9668,6 +9668,7 @@ jQuery(window).on('scroll', function(){
         jQuery('.leftSection').removeClass('leftSectionFixed');
     }
 })
+
 // Added by Gaurav kumar
 jQuery(window).on('load', function(){
 	setTimeout(function(){
