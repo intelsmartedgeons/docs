@@ -1,3 +1,11 @@
+var pathname = window.location.pathname;
+if(pathname.includes('/docs/')){
+    jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
+}
+if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
+    jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
+    jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
+}
 (function(global, factory) {
     typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() : typeof define === "function" && define.amd ? define("uikit", factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, 
     global.UIkit = factory());
@@ -9598,14 +9606,6 @@ function contactformsubmit() {
     });
 }*/
 jQuery(document).ready(function() {
-    var pathname = window.location.pathname;
-    if(pathname.includes('/docs/')){
-        jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
-    }
-    if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
-        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
-        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
-    }
     jQuery("input[name='existing_member']").click(function() {
         if (jQuery("input:radio[name=existing_member]:checked").val() == "yes") {
             $(".cn-no").hide();
