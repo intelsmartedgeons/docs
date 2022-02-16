@@ -1,0 +1,6 @@
+node_modules/
+_config.yml
+Gemfile
+Gemfile.lock
+_site/
+uploads/
