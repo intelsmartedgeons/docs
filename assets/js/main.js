@@ -9645,7 +9645,7 @@ jQuery(window).on('load', function(){
         jQuery(this).next('ul').slideToggle();
     }) */
     setTimeout(function(){
-        if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active')){
+        if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length){
             jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
                 scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
             });
