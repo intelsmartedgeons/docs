@@ -9639,7 +9639,7 @@ jQuery(window).on('load', function(){
     pathname = pathname + window.location.search;
     pathname = pathname + window.location.hash;
     if(pathname.includes('/docs/')){
-        jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
     }
     /* jQuery('.sidebar-docs .leftSection .collapsedArea h5').on('click', function(){
         jQuery(this).next('ul').slideToggle();
