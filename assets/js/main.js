@@ -9643,9 +9643,11 @@ jQuery(window).on('load', function(){
         jQuery(this).next('ul').slideToggle();
     }) */
     setTimeout(function(){
-        jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
-            scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active')?.offset().top
-        });
+        if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active')){
+            jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
+                scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
+            });
+        }
     }, 1000)
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
