@@ -9635,7 +9635,7 @@ function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
 jQuery(window).on('load', function(){
-    var pathname = window.location.pathname;
+    var pathname = window.location.pathname + window.location.search;
     if(pathname.includes('/docs/')){
         jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
     }
