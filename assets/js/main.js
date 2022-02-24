@@ -9646,7 +9646,7 @@ jQuery(window).on('load', function(){
             var pathname = pathURL.replace(/\/$/, "");
             jQuery('.sidebar-docs .leftSection .collapsedArea ul li').removeClass('uk-active')
             jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
-        }, 1000)
+        }, 500)
     })
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
