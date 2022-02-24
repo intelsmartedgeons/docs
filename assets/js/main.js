@@ -9647,6 +9647,20 @@ jQuery(window).on('load', function(){
             jQuery('.sidebar-docs .leftSection .collapsedArea ul li').removeClass('uk-active')
             jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
         }, 500)
+        if(jQuery('#breadcrumbs').length){
+            setTimeout(function(){
+                const breadcrumbs    = document.querySelector('#breadcrumbs');
+                const allActiveTabs  = document.querySelectorAll('.openList');
+                let nodeList = '';
+                allActiveTabs.forEach(function(activeTab, i) {
+                    nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
+                    //console.log(nodeList);
+                });
+                const linkText =  jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').text();
+                breadcrumbs.insertAdjacentHTML("beforeend", nodeList+ " > " +linkText);
+    
+            }, 700)
+        }
     })
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
