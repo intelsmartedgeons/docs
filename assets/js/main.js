@@ -9641,6 +9641,9 @@ jQuery(window).on('load', function(){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
     }
     jQuery('.sidebar-docs .leftSection .collapsedArea ul li>ul li span a').on('click', function(){
+        pathURL = window.location.pathname + window.location.search + window.location.hash;
+        var pathname = pathURL.replace(/\/$/, "");
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li').removeClass('uk-active')
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
     })
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
