@@ -9682,3 +9682,4 @@ jQuery(window).on('scroll', function(){
         jQuery('.leftSection').removeClass('leftSectionFixed');
     }
 })
+
