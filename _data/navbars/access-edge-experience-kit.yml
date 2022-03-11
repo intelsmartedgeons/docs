@@ -2,9 +2,9 @@ title: "Access Edge Experience Kit"
 order: 6
 section:
   - title: "Overview"
+    order: 1
   - path: /ido-specs/doc/reference-architectures/ran/smartedge-open_ran
   - title: "Getting Started"
-    order: 1
     section:
       - title: Cluster Setup
         path: /ido-specs/doc/getting-started/smartedge-open-cluster-setup/?page=access-edge-experience-kit
