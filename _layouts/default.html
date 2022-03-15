@@ -21,11 +21,11 @@ Copyright (c) 2021 Intel Corporation
 
     {% include offcanvas.html %}
 
-    {% comment %}
     {% if page.layout != 'doc' %}
         {% include footer.html %}
     {% endif %}
 
+    {% comment %}
     {% if page.layout == 'doc' %}
         {% include hook-pre-closing-body-doc.html %}
     {% endif %}
@@ -61,7 +61,7 @@ Copyright (c) 2021 Intel Corporation
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-						/*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
+			/*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
                             jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
                         }else{
                             jQuery(this).attr('href', url.replace(".md", "/"));
