@@ -17,15 +17,15 @@ Copyright (c) 2021 Intel Corporation
     
     {% include doc.html %}
 
-
-
     {% include offcanvas-docs.html %}
 
     {% include offcanvas.html %}
 
-   <!--  {% if page.layout != 'doc' %}
+    {% comment %}
+    {% if page.layout != 'doc' %}
         {% include footer.html %}
-    {% endif %} -->
+    {% endif %}
+    {% endcomment %}
 
     {% if page.layout == 'doc' %}
         {% include hook-pre-closing-body-doc.html %}
