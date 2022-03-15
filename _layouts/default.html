@@ -61,7 +61,15 @@ Copyright (c) 2021 Intel Corporation
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-                        /*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
+						console.log(url);
+						const urlArray	= url.split('/');
+						console.log(urlArray);
+						if(urlArray[0] == '') {
+							console.log("if");
+							url = `/docs${url}`;
+							console.log(url);
+						}	
+						/*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
                             jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
                         }else{
                             jQuery(this).attr('href', url.replace(".md", "/"));
