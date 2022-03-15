@@ -1,3 +1,7 @@
+<!--
+SPDX-License-Identifier: Apache-2.0
+Copyright (c) 2021-2022 Intel Corporation
+-->
 {% assign navigations = "" | split:"|" %}
 {% for navbars_data in site.data.navbars %}
   {% assign nav = navbars_data[1] %}
@@ -16,7 +20,7 @@
     {% assign pagePath = page.path | remove: ".md" | prepend:"/" | prepend: site.baseurl | append:'/' %}
     {% for navbar in navbars %}
       {% for breadcrumb in navbar.section %}
-      
+
         {% assign crumbs = breadcrumb.path | remove:'/index.html' | split: '/' %}
         {% assign cur_path = breadcrumb.path | append:'/' %}
         {% if pagePath == cur_path %}
@@ -35,7 +39,7 @@
             {% endif %}
           {% endfor %}
         {% endif %}
-        
+
       {% endfor %}
     {% endfor %}
   {% endif %}
