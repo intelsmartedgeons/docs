@@ -80,6 +80,7 @@ Copyright (c) 2021 Intel Corporation
                         }*/
                         //Remove .md From href
                         if(url.indexOf('/blob/main') != '-1' && url.indexOf('https://github.com') != '-1' && (url.indexOf('/docs') != '-1' || url.indexOf('/ido-specs') != '-1')){
+                            console.log("last if");
                             url = url.replace("/blob/main", "");
                             if(url.indexOf('https://github.com/smart-edge-open') != '-1'){
                                 url = url.replace("https://github.com/smart-edge-open", "");
