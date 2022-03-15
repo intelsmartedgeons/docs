@@ -79,6 +79,11 @@ Copyright (c) 2021 Intel Corporation
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }*/
                         //Remove .md From href
+                        console.log(url.indexOf('/blob/main'));
+                        console.log(url.indexOf('https://github.com'));
+                        console.log(url.indexOf('/docs'));
+                        console.log(url.indexOf('/ido-specs'));
+                        
                         if(url.indexOf('/blob/main') != '-1' && url.indexOf('https://github.com') != '-1' && (url.indexOf('/docs') != '-1' || url.indexOf('/ido-specs') != '-1')){
                              console.log("last if");
                             url = url.replace("/blob/main", "");
