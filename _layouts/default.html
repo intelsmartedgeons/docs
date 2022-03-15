@@ -61,14 +61,6 @@ Copyright (c) 2021 Intel Corporation
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-						console.log(url);
-						const urlArray	= url.split('/');
-						console.log(urlArray);
-						if(urlArray[0] == '') {
-							console.log("if");
-							url = `/docs${url}`;
-							console.log(url);
-						}	
 						/*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
                             jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
                         }else{
@@ -79,19 +71,16 @@ Copyright (c) 2021 Intel Corporation
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }*/
                         //Remove .md From href
-                        console.log(url.indexOf('/blob/main'));
-                        console.log(url.indexOf('https://github.com'));
-                        console.log(url.indexOf('/docs'));
-                        console.log(url.indexOf('/ido-specs'));
-                        
                         if(url.indexOf('/blob/main') != '-1' && url.indexOf('https://github.com') != '-1' && (url.indexOf('/docs') != '-1' || url.indexOf('/ido-specs') != '-1')){
-                             console.log("last if");
                             url = url.replace("/blob/main", "");
                             if(url.indexOf('https://github.com/smart-edge-open') != '-1'){
                                 url = url.replace("https://github.com/smart-edge-open", "");
                             }
                             jQuery(this).attr('href', url.replace(".md", "/"));
-                        }
+                        } else if(url.includes("/docs") == false) {
+							new_url = (url.startsWith("/") == true)?base_url+url:base_url+"/"+url;
+							jQuery(this).attr('href', new_url.replace(".md", "/"));
+						}
                         /*else{
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }*/
