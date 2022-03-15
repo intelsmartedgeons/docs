@@ -25,13 +25,13 @@ Copyright (c) 2021 Intel Corporation
     {% if page.layout != 'doc' %}
         {% include footer.html %}
     {% endif %}
-    {% endcomment %}
 
     {% if page.layout == 'doc' %}
         {% include hook-pre-closing-body-doc.html %}
     {% endif %}
 
     {% include hook-pre-closing-body.html %}
+    {% endcomment %}
 
     <script type="text/javascript">
         jQuery(document).ready(function(){
