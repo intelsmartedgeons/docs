@@ -61,7 +61,9 @@ Copyright (c) 2021 Intel Corporation
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
+						console.log(url);
 						const urlArray	= url.split('/');
+						console.log(urlArray);
 						if(urlArray[0] == '') {
 							url = `/docs${url}`;
 						}	
