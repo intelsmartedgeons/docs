@@ -11,6 +11,7 @@ Copyright (c) 2019-2020 Intel Corporation
     - [Overview of SR-IOV Network Operator](#overview-of-sr-iov-network-operator)
   - [SR-IOV Network Operator configuration and usage](#sr-iov-network-operator-configuration-and-usage)
     - [Configuration](#configuration)
+      - [SR-IOV Network Operator](#sr-iov-network-operator-1)
       - [SR-IOV Network Node Policy](#sr-iov-network-node-policy)
       - [SR-IOV Network](#sr-iov-network)
     - [Usage](#usage)
@@ -39,6 +40,34 @@ SR-IOV Network Operator is deployed using Makefiles and it requires additional p
 Images for Operator are downloaded from Openshift repository and stored in local registry.
 
 ### Configuration
+#### SR-IOV Network Operator
+
+The SR-IOV NIC's are preconfigured, i.e. currently the list of network interfaces is hard coded (for supported HW platform).
+Users who are installing the DEK on a system with a different NIC's must update manually the list above with the related interface names in the ESP provisioning configuration file (before Smart Edge Open deployment):
+
+- generate a custom configuration file with `./dek_provision.py --init-config > custom.yml`
+- edit generated file and set `cvl_sriov_nics` under `group vars: all:`, e.g.
+
+```yaml
+profiles:
+  - name: SEO_DEK
+    [...]
+    group_vars:
+      groups:
+        all:
+          cvl_sriov_nics:
+            Debian:
+              c0p0: "<interface name>"
+              c0p1: "<interface name>"
+              c1p0: "<interface name>"
+              c1p1: "<interface name>"
+```
+
+During deployment users can use a flag (in the same yml file) which allows for enabling and disabling the NIC's configuration: "sriov_network_operator_configure_enable".
+
+Each NIC interface in the list above is a physical function of a SR-IOV NIC and configured in the same yml file in:
+- The related VF's in the next section: "sriov_network_node_policies".
+- The routing data in the section: "sriov_networks".
 
 SR-IOV Network Operator provides two custom resources to configure SR-IOV network devices and network attachments:
 

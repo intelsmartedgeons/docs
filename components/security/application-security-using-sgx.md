@@ -35,15 +35,15 @@ Copyright (c) 2021 Intel Corporation
 10. DEK Cluster is up along with K8s Intel device plugin installed.
 11. Graphenized app is deployed on the kubenetes node using intel device plugin which exposes SGX memory to pods/jobs running on it.
 
-[![ESP SGX Workflow](images/ESP-SGX-workflow.png)](images/ESP-SGX-workflow.png)
+<img src="images/ESP-SGX-workflow.png" style="zoom:100%;" />
 
 ## Architecture
 
-[![SGX integration with DEK design](images/SGX-integration-with-DEK-design.png)](images/SGX-integration-with-DEK-design.png)
+<img src="images/SGX-integration-with-DEK-design.png" style="zoom:100%;" />
 
 ### Sequential deployment workflow showing flow of credentials/certificates
 
-[![SGX provisioning seq diagram](images/SGX-provisioning-seq-diagram.png)](images/SGX-provisioning-seq-diagram.png)
+<img src="images/SGX-provisioning-seq-diagram.png" style="zoom:100%;" />
 
 ## How To
 ### Enable Intel SGX in BIOS
