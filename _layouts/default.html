@@ -42,7 +42,7 @@ Copyright (c) 2021 Intel Corporation
                     var httpUrl = url.indexOf('http://');
                     var httpsUrl = url.indexOf('https://');
                     var hashCheck = url.indexOf('#');
-                    if (urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && (hashCheck == '-1' || url.indexOf('/docs') != '-1')) {
+                    if (urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && hashCheck == '-1') {
                         //Check Image
                         var checkImage = url.split('/');
                         //Remove .md From href
@@ -56,9 +56,7 @@ Copyright (c) 2021 Intel Corporation
                             } else if (url.startsWith("../") == true) {
                                 url = url.replace("../", "");
                             }
-                            console.log('1 : '+url.startsWith("/"));
                             new_url = (url.startsWith("/") == true) ? base_url + url : base_url + "/" + url;
-                            console.log(new_url);
                         }
                         //Update Url
                         jQuery(this).attr('href', new_url);
@@ -79,12 +77,11 @@ Copyright (c) 2021 Intel Corporation
                                 url = url.replace("https://github.com/smart-edge-open", "");
                             }
                             jQuery(this).attr('href', url.replace(".md", "/"));
-                        }
-                        /*else if (url.includes("/docs") == false) {
+                        } else if ((url.includes("/docs") == false) && urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1') {
                             new_url = (url.startsWith("/") == true) ? base_url + url : base_url + "/" + url;
                             jQuery(this).attr('href', new_url.replace(".md", "/"));
                         }
-                        else{
+                        /*else{
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }*/
                     }
