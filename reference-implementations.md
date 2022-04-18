@@ -6,6 +6,8 @@ Copyright (c) 2021 Intel Corporation
 # Reference Implementations
 Intel has created several example solutions to serve as reference implementations (RIs) on the Intel® Smart Edge infrastructure. These RIs address identified use cases for an edge cloud infrastructure, in different industry segments. Application developers in ISV or end-user organizations can install and study these RIs, and use them as a base for applications they can develop to address user needs
 
+A set of RIs have been created and hosted in a “Smart Edge Open” section in the [Intel Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest&q=%22smart%20edge%20open%22).
+
 ## What is Intel® Smart Edge Open?
 Intel® Smart Edge Open is an edge computing software toolkit for building platforms optimized for the edge. 
 Platforms created with Intel® Smart Edge Open can host a wide range of services, from network functions such as 5G RAN and 5G core, to AI, media processing, and security workloads.
