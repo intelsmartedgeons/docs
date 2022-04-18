@@ -21,7 +21,8 @@ They are:
 
 The RIs have all been tested and run on top of the Intel&reg; Smart Edge Developer Experience Kit, and a few of them have also been tested to run on other Experience Kits (EKs) as per table below:
 
-<table>
+<div class="responsiveTable">
+<table class="docTable">
     <thead>
         <tr>
             <th>Reference Implementation</th>
@@ -63,3 +64,4 @@ The RIs have all been tested and run on top of the Intel&reg; Smart Edge Develop
         </tr>
     </tbody>
 </table>
+</div>
