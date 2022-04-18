@@ -20,3 +20,46 @@ They are:
 - [Telehealth Remote Monitoring](https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/telehealth-remote-monitoring.html): this RI leverages the Intel® Collaboration Suite for WebRTC to set up and manage sessions between users that could include clinicians, patients, and caregivers. A variety of end-point devices like cameras, smartphones and laptops are accommodated
 
 The RIs have all been tested and run on top of the Intel&reg; Smart Edge Developer Experience Kit, and a few of them have also been tested to run on other Experience Kits (EKs) as per table below:
+
+<table>
+    <thead>
+        <tr>
+            <th>Reference Implementation</th>
+            <th>Developer Experience Kit</th>
+            <th>Private Wireless Experience Kit</th>
+            <th>Secure Access Service Edge (SASE) Experience Kit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Wireless Network-Ready Intelligent Traffic Management</td>
+            <td>v 21.12</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Intelligent Connection Management xApp</td>
+            <td>v 21.12</td>
+            <td>v 22.01</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Wireless Network-Ready PCB Defect Detection</td>
+            <td>v 21.12</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Smart VR – Live Streaming</td>
+            <td>v 21.12</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Telehealth Remote Monitoring</td>
+            <td>v 21.12</td>
+            <td></td>
+            <td>v 22.02</td>
+        </tr>
+    </tbody>
+</table>
