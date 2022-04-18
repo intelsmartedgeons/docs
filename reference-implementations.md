@@ -25,9 +25,9 @@ The RIs have all been tested and run on top of the Intel&reg; Smart Edge Develop
 <table class="docTable">
     <thead>
         <tr>
-            <th>Reference Implementation</th>
-            <th>Developer Experience Kit</th>
-            <th>Private Wireless Experience Kit</th>
+            <th>Reference<br>Implementation</th>
+            <th>Developer<br>Experience Kit</th>
+            <th>Private Wireless<br>Experience Kit</th>
             <th>Secure Access Service Edge (SASE) Experience Kit</th>
         </tr>
     </thead>
