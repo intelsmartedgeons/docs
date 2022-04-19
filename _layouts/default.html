@@ -78,7 +78,7 @@ Copyright (c) 2021 Intel Corporation
                             }
                             jQuery(this).attr('href', url.replace(".md", "/"));
                             console.log("First : "+url);
-                        }else if((url.includes("/docs") == false) && urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1'){
+                        }else if((url.includes("/docs") == false) && urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1' && url.startsWith("#") == false){
                             new_url = (url.startsWith("/") == true) ? base_url + url : base_url + "/" + url;
                             jQuery(this).attr('href', new_url.replace(".md", "/"));
                             console.log("Second : "+new_url);
