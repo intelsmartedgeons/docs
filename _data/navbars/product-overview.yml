@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2021-2022 Intel Corporation
 title: "Product Overview"
 path: /docs/product-overview
 order: 0
@@ -6,7 +8,6 @@ section:
     path: /docs/product-overview
     meta_title: 
     meta_description: 
-
   - title: Licensing
     path: /request-license
     meta_title: 

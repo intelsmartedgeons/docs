@@ -1,3 +1,6 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2021 Intel Corporation
+ */
 .uk-navbar-container{
     .uk-navbar-center, .uk-navbar-right{
         display: none;
@@ -15,100 +18,49 @@
             margin-left: auto;
             li{
                 a{
-                    color: #BDC3C7;
+                    color: $menuColor;
                     height: 103px;
                     font: 18px/22px 'Intel One Display Regular';
                     letter-spacing: 0.7px;
                     &:hover{
-                        color: #00c7fd;
+                        color: $blue;
                     }
                 }
                 &.uk-active{
                     a{
-                        color:  #00c7fd;
+                        color: $blue;
                     }
                 }
             }
         }
     }
 }
-#breadcrumbs{
-    margin-bottom: 20px;
-    a{
-        color: #00c7fd;
-        font-weight: 600;
-    }
-    & + .highlighter-rouge{
-        display: none;
-    }
-}
 @media (max-width:959px){
-    .uk-navbar-container{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        border-bottom: 1px solid #ccc;
-        z-index: 2;
-        background-color: #fff;
-        .uk-navbar-toggle{
-            color: $blue;
-        }
-    }
-    body{
-        padding-top: 80px;
-    }
-    //.uk-navbar-toggle[aria-expanded="true"] + .uk-navbar-nav{
-    .uk-navbar-nav{
+    .uk-navbar-toggle[aria-expanded="true"] + .uk-navbar-nav{
         display: block !important;
         margin-left: 0;
         z-index: 1001;
         position: fixed;
-        top: 81px;
-        width: 100%;
-        height: calc(100vh - 81px);
-        background: #fff;
-        padding-top: 20px;
-        transition: 0.3s;
-        left: -100%;
+        top: 0;
+        padding-top: 100px;
+        width: 250px;
         li{
             a{
                 text-align: left;
                 display: block;
-                height: auto!important;
-                padding: 15px 40px;
+                height: auto;
+                padding: 15px;
             }
         }
-    }
-    .uk-navbar-toggle.showMenu + .uk-navbar-nav{
-        left:0;
     }
     .uk-navbar-container{
         .uk-navbar-left{
             .uk-navbar-toggle{
-                a{
+                .uk-margin-small-left{
                     color: $blue;
-                    font-size: 18px;
-                    margin-left: 10px;
-                }
-                &.toggleMenu{
-                    .crossIcon{
-                        display: none;
-                    }
-                    &.showMenu{
-                        .mainIcon{
-                            display: none;
-                        }
-                        .crossIcon{
-                            display: block;
-                        }
-                    }
+                    font-size: 16px;
                 }
             }
         }
-    }
-}
-@media (max-width:639px){
-    .uk-navbar-nav li a{
-        padding: 15px;
     }
 }

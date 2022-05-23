@@ -1,11 +1,11 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2021 Intel Corporation
+ */
 .noteLeft, .noteRight{
     width:20%;
     float: left;
     *{
         text-align: left;
-    }
-    .uk-button-small{
-        cursor: default;
     }
 }
 .noteLeft{
@@ -16,18 +16,5 @@
     &:not(:last-child){
         border-bottom: 1px solid $menuColor;
         margin-bottom: 40px;
-    }
-}
-@media (max-width:991px){
-    .noteLeft{
-        width: 22%;
-    }
-    .noteRight{
-        width:78%;
-    }
-}
-@media (max-width:767px){
-    .noteLeft, .noteRight{
-        width:100%;
     }
 }

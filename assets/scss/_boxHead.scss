@@ -1,3 +1,6 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2021 Intel Corporation
+ */
 .boxHead{
     .boxHeadBox{
         margin-top: 30px;
@@ -36,6 +39,16 @@
         .boxHeadBox{
             position: relative;
             padding-right: 50px;
+            &:not(:nth-child(3n)){
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 4px;
+                    height: 100%;
+                    background-color: $blue;
+                    right: 0px;
+                }
+            }
             &:last-child{
                 &:after{
                     display: none;
@@ -71,26 +84,6 @@
                 list-style-type: none;
             }
         }
-    }
-    &.boxAPI{
-        margin-bottom: 100px;
-        .boxHeadBox{
-            padding: 15px 25px;
-            ul{
-                padding-left: 0;
-                margin-bottom: 15px !important;
-            }
-        }
-    }
-}
-@media (min-width:960px){
-    .boxHead.boxes5 .boxHeadBox:not(:nth-child(3n)):after{
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 100%;
-        background-color: $blue;
-        right: 0px;
     }
 }
 @media (max-width:1199px){

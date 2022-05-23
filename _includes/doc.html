@@ -40,7 +40,11 @@ Copyright (c) 2021-2022 Intel Corporation
                                 <!-- Start Comment -->
                                 {% comment %}
                                 {% for navbar in navbars %}
+                                    {% if navbar.tags != '' && navbar.tags == 'span' %}
+                                    <span><h5>{{ navbar.title }}</h5></span>
+                                    {% else %}
                                     <h5>{{ navbar.title }}</h5>
+                                    {% endif %}
                                     <ul class="uk-nav uk-nav-default doc-nav">
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}

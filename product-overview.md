@@ -28,7 +28,7 @@ As cloud architectures disaggregate in the era of 5G, new edge locations are eme
 
 Intel® Smart Edge Open experience kits offer you a starting point to create platforms for these emerging edge locations. Experience kits combine 5G capabilities and cloud-native components to simplify the deployment of complex network architectures, significantly reducing development time and cost.
 
-[![Edge Locations](images/overview1.png)]({{site.baseurl}}/images/overview1.png) 
+[![Edge Locations](images/overview1.png)](images/overview1.png) 
 
 The Intel® Smart Edge Open portfolio of experience kits includes:
 - **Developer Experience Kit**: A foundational kit for exploring the possibilities of Intel® Smart Edge Open that provides the base capabilities you need to run typical containerized edge services, including networking, security, and telemetry. If you are new to building edge platforms, this may be your starting point.
@@ -37,7 +37,7 @@ The Intel® Smart Edge Open portfolio of experience kits includes:
 - **Access Edge Experience Kit**: The starting point for building O-RAN compliant edge platforms. 
 - **Near Edge Experience Kit**: The starting point for building edge platforms that reside in a telco cloud.
 
-The Developer Experience Kit is available under the Apache 2.0 license. All other experience kits require a royalty-free Intel proprietary license. [Request a license]({{site.main_url}}/request-license/).
+The Developer Experience Kit is available under the Apache 2.0 license. All other experience kits require a royalty-free Intel proprietary license. [Request a license](https://smart-edge-open.github.io/request-license/).
 
 Experience kits are composed of sets of building blocks from the open community or from Intel. Building blocks are units of functionality that have been carefully selected and optimized to address the services targeted for use cases at a specific edge location. You can consume experience kits in their entirety, or use only the building blocks required by your own use case.
 
@@ -52,15 +52,15 @@ Common building blocks used across experience kits include:
 
 Experience kits are built on top of Kubernetes, a production-grade platform for managing containerized workloads and services. Experience kits customize and extend the Kubernetes control plane and edge node with microservices, third-party applications, extensions, and optimizations. The control plane node and one or more edge nodes form an Intel® Smart Edge Open edge cluster. 
 
-[![Smart Edge Open Logical](images/seo-node.png)]({{site.baseurl}}/images/seo-node.png)
+[![Smart Edge Open Logical](images/seo-node.png)](images/seo-node.png)
 
 The Intel® Smart Edge Open node architecture is specialized for each experience kit, to enable developers to create solutions for specific use cases at a given edge location.
 
 The edge node for the Developer Experience Kit:
-[![Developer Experience Kit edge node diagram](/experience-kits/images/dek-component-diagram.png)]({{site.baseurl}}/images/dek-component-diagram.png)
+[![Developer Experience Kit edge node diagram](/experience-kits/images/dek-component-diagram.png)](images/dek-component-diagram.png)
 
 The edge node for the 5G Private Wireless Experience Kit with Integrated RAN:
-[![5G Private Wireless edge node diagram](images/pwek-aio.drawio.png)]({{site.baseurl}}/images/pwek-aio.drawio.png)
+[![5G Private Wireless edge node diagram](images/pwek-aio.drawio.png)](images/pwek-aio.drawio.png)
 
 ### Control Plane
 

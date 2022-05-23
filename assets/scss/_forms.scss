@@ -1,3 +1,6 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2021 Intel Corporation
+ */
 form{
     label:not(.form-check-label){
         margin: 20px 0 10px;
@@ -10,7 +13,6 @@ form{
         color: red;
         font-size: 14px !important;
         margin-left: 2px;
-        margin-top: 4px;
         text-transform: capitalize;
         display: block;
     }
@@ -46,6 +48,9 @@ form{
 .formRight{
     padding-left: 20px;
     padding-right: 0px;
+    h2{
+        margin-top: 50px;
+    }
 }
 .colLeft, .colRight{
     width: 50%;
@@ -57,22 +62,7 @@ form{
     padding-left: 20px;
     padding-right: 0;
 }
-@media (min-width:768px){
-    .formOuter{
-        display: flex;
-        .verticalText{
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-}
 @media (max-width:991px){
-    form{
-        label:not(.form-check-label){
-            margin: 15px 0 7px;
-        }
-    }
     .colLeft{
         padding-right: 10px;
     }
@@ -84,16 +74,10 @@ form{
     }
     .formRight{
         padding-left: 15px;
-        .uk-list{
-            margin-top: 20px !important;
-            li{
-                margin-top: 15px;
-            }
-        }
     }
 }
 @media (max-width:767px){
-    .formLeft, .formRight, .colLeft, .colRight{
+    .formLeft, .formRight{
         padding-right: 0px;
         padding-left: 0px;
         width:100%;

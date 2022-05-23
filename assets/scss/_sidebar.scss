@@ -1,3 +1,6 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2021 Intel Corporation
+ */
 .sidebar-docs{
     padding-right: 0px;
     position: static !important;
@@ -16,7 +19,6 @@
                 padding: 12px;
                 outline: 0;
                 margin-bottom: 35px;
-                border-radius: 0px;
             }
             .ais-search-box--powered-by{
                 display: none;
@@ -25,8 +27,8 @@
                 width: 50px;
                 height: 50px;
                 position: absolute;
-                top:2px;
-                right:2px;
+                top:0;
+                right: 0px;
                 background-color: $blue;
                 cursor: pointer;
                 .ais-search-box--magnifier{
@@ -150,46 +152,6 @@
         .collapsedArea{
             max-height: calc(100vh - 230px);
             overflow-y: auto;
-            padding-right: 10px;
-            clear: both;
-            h5{
-                margin-bottom: 10px;
-            }
-            * + h5{
-                margin-top: 20px;
-            }
-            ul{
-                margin-top: 0;
-                li{
-                    position: relative; padding: 5px 0 0 20px; list-style-type: none;color:#333333;
-                    &.hasChild{
-                        > span{cursor: pointer;}
-                        &:before{
-                            content: ""; border-left: 9px solid #868686; border-top: 6px solid transparent; border-bottom: 6px solid transparent; line-height: 10px; display: block; position: absolute; left: 0;top:8px;transition: 0.5s;transform: rotate(0deg);
-                        }
-                        &.openList:before{transform: rotate(90deg);}
-                    }
-                    > ul{display: none;}
-                }
-                li{
-                    a{
-                        padding: 0;
-                        line-height: 1.8;
-                        &:hover{
-                            color:$blue;
-                        }
-                    }
-                    &.uk-active{
-                        a{
-                            color:$blue;
-                            font-weight: bold;
-                            &::before{
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
     .doc-nav{
@@ -197,21 +159,6 @@
             a{
                 font-size: 14px;
                 color: $menuColor;
-            }
-        }
-    }
-}
-.sidebar-fixed-width{
-    & + .uk-width-1-1{
-        article{
-            article{
-                .article-content{
-                    table{
-                        display: block;
-                        max-width: 100%;
-                        overflow-x: auto;
-                    }
-                }
             }
         }
     }
@@ -240,11 +187,11 @@
             height: 70vh;
             top: 17%;
             padding: 20px 0 20px 20px;
-            width: 280px;
+            width: 320px;
             border-style: solid;
             border-color: #ccc;
             border-width: 2px 2px 2px 0px;
-            left: -280px;
+            left: -320px;
             transition: .3s;
             #contact-button{
                 display: block;
@@ -308,10 +255,3 @@
         }
     }
 }
-/*  collapse left bar menu starts */
-.sidebar-docs .leftSection .collapsedArea h5{
-    & + ul{
-        display: none;
-    }
-}
-/*  collapse left bar menu ends */

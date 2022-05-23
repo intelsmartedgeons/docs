@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2021 Intel Corporation
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog.
@@ -5,7 +8,6 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site title and description
-#title:              Intel® Smart Edge Open - Bring Your Edge Solution to Market Faster
 title:              Intel® Smart Edge Open
 description:        Documentation
 lang:               en
@@ -14,15 +16,14 @@ lang:               en
 baseurl:            "/docs"
 
 
-apiURL: "https://openness-staging.onsumaye.com"
+apiURL: "https://www.openness.org"
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 
 url:                ""
-main_url:           "https://onsumaye-team.github.io"
-#main_url:           "http://onsumaye-team.localhost.com"
+main_url:           "https://smart-edge-open.github.io"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               
@@ -34,6 +35,7 @@ navbar:
 # Default footer image settings
 #footer:
     #copyright:      Made by <a href="https://unbound.studio/">Unbound Studio</a> in Cleveland.
+
 
 # Google analytics code, get your code here https://www.google.com/analytics/
 google_analytics: true

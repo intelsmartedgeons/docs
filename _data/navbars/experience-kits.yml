@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2021-2022 Intel Corporation
 title: "Private Wireless Experience Kit"
 path: /experience-kits/
 order: 4
@@ -44,4 +46,4 @@ section:
       - title: "5G UPF Workload Acceleration"
         path: /docs/software-modules/5G-UPF-workload-acceleration
         meta_title: 
-        meta_description:             
+        meta_description:
