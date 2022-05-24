@@ -14,10 +14,10 @@ Copyright (c) 2021-2022 Intel Corporation
 {% capture pageTitleUpper %}{% for word in pageTitle %}{{ word | capitalize }} {% endfor %}{% endcapture %}
 
 <!-- Github Page Url Start  -->
-{% if site.main_url == 'https://onsumaye-team.github.io/' %}
-  {% assign githubUrl = 'https://github.com/onsumaye-team/' | append:site.baseurl | append:'blob' %}
+{% if site.main_url == 'https://onsumaye-team.github.io' %}
+  {% assign githubUrl = 'https://github.com/onsumaye-team' | append:site.baseurl | append:'/blob' %}
 {% else %}
-  {% assign githubUrl = 'https://github.com/onsumaye-team/' | append:site.baseurl | append:'blob' %}
+  {% assign githubUrl = 'https://github.com/onsumaye-team' | append:site.baseurl | append:'/blob' %}
 {% endif %}
 {{ githubUrl }}
 <!-- Github Page Url End  -->
