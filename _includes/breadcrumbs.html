@@ -17,9 +17,9 @@ Copyright (c) 2021-2022 Intel Corporation
 {% if site.main_url == 'https://onsumaye-team.github.io' %}
   {% assign githubUrl = 'https://github.com/onsumaye-team' | append:site.baseurl | append:'/blob' | append:'/gh-pages' %}
 {% else %}
-  {% assign githubUrl = 'https://github.com/onsumaye-team' | append:site.baseurl | append:'/blob' | append:'/main' %}
+  {% assign githubUrl = 'https://github.com/smart-edge-open' | append:site.baseurl | append:'/blob' | append:'/main' %}
 {% endif %}
-{% assign githubUrl = githubUrl | append:page.path %}
+{% assign githubUrl = githubUrl | append:'/' | append:page.path %}
 {{ githubUrl }}
 <!-- Github Page Url End  -->
 
