@@ -89,6 +89,13 @@ Copyright (c) 2021 Intel Corporation
             });
         });
 
+        //Add highlight class if not have in pre tag
+        document.querySelector('.article-content').querySelectorAll('pre').forEach(function (pre){
+            if(pre.classList.contains('highlight') == false){
+                pre.classList.add("highlight");
+            }
+        });
+        //Add Copy Button Functionality
         document.querySelector('.article-content').querySelectorAll('pre.highlight').forEach(function (pre) {
             var button = document.createElement('button');
             var copyText = 'Copy';
