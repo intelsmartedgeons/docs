@@ -44,9 +44,9 @@ uploads:            /uploads/
 
 # Build settings
 markdown:           kramdown
-kramdown:
-  parse_block_html: true
-  
+#kramdown:
+#  parse_block_html: true
+
 highlighter:        rouge
 
 gems:

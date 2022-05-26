@@ -161,7 +161,14 @@ Copyright (c) 2021-2022 Intel Corporation
                 </article>
                 <div class="rightSidebar">
                     Right Side Bar
+                    {% comment %}
                     {% include toc.html %}
+                    {% endcomment %}
+                    <nav>
+                        <h4>Table of Contents</h4>
+                        * TOC
+                        {:toc}
+                    </nav>
                 </div>
 
                 <script>
