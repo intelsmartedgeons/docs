@@ -91,8 +91,11 @@ Copyright (c) 2021 Intel Corporation
 
         //Add highlight class if not have in pre tag
         document.querySelector('.article-content').querySelectorAll('pre').forEach(function (pre){
-            var high = pre.classList.contains('highlight');
-            console.log(high);
+            //var high = pre.classList.contains('highlight');
+            if(pre.classList.contains('highlight') == false){
+                pre.classList.add("highlight");
+            }
+            //console.log(high);
         });
 
         /*document.querySelector('.article-content').querySelectorAll('pre.highlight').forEach(function (pre) {
