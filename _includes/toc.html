@@ -26,7 +26,7 @@
     {% assign lastLevel = 0 %}
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
-{{ listModifier }}
+{{ nodes }}
     {% for node in nodes %}
         {% if node == "" %}
             {% continue %}
