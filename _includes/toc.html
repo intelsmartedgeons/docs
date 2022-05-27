@@ -21,12 +21,12 @@
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | strip | split: '<h' %}
 
-    {% assign firstHeader = false %}
+    {% assign firstHeader = true %}
     {% assign currLevel = 0 %}
     {% assign lastLevel = 0 %}
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
-
+{{ listModifier }}
     {% for node in nodes %}
         {% if node == "" %}
             {% continue %}
