@@ -21,7 +21,7 @@
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | strip | split: '<h' %}
 
-    {% assign firstHeader = false %}
+    {% assign firstHeader = true %}
     {% assign currLevel = 0 %}
     {% assign lastLevel = 0 %}
 
@@ -39,7 +39,7 @@
         {% endif %}
 
         {% assign _workspace = node | split: '</h' %}
-{{ _workspace }}
+
         {% assign _idWorkspace = _workspace[0] | split: 'id="' %}
         {% assign _idWorkspace = _idWorkspace[1] | split: '"' %}
         {% assign htmlID = _idWorkspace[0] %}
