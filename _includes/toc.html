@@ -26,7 +26,7 @@
     {% assign lastLevel = 0 %}
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
-{{ nodes }}
+
     {% for node in nodes %}
         {% if node == "" %}
             {% continue %}
@@ -69,7 +69,7 @@
         {% endif %}
 
         {% capture anchorBody %}{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}{% endcapture %}
-
+{{ htmlID }}
         {% if htmlID %}
             {% capture anchorAttributes %} href="{% if baseURL %}{{ baseURL }}{% endif %}#{{ htmlID }}"{% endcapture %}
 
