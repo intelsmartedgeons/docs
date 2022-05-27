@@ -1,3 +1,4 @@
+{% comment %}
 {% capture tocWorkspace %}
     {% capture newline %}
     {% endcapture %}
@@ -126,3 +127,8 @@
         {% endif %}
     {% endif %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
+{% endcomment %}
+<nav>
+    * TOC
+    {:toc}
+</nav>
