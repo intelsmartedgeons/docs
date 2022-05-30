@@ -85,6 +85,14 @@
             {% capture listItem %}{{ anchorBody }}{% endcapture %}
         {% endif %}
 
+        {% if currLevel < lastLevel %}
+            {% assign repeatCount = lastLevel | minus: currLevel %}
+            {% for i in (1..repeatCount) %}
+                {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
+            {% endfor %}
+        {% endif %}
+
+        {% comment %}
         {% if currLevel > lastLevel %}
             {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier | append: 'ul_open' }}{{ subMenuClass }}>{% endcapture %}
@@ -107,6 +115,7 @@
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
             {% endcomment %}
         {% endif %}
+        {% endcomment %}
 
         {% capture jekyll_toc %}{{ jekyll_toc }}<li{{ listItemClass }}>{{ listItem }}{% endcapture %}
 
