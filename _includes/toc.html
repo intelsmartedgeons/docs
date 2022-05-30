@@ -103,12 +103,13 @@
         {% assign lastLevel = currLevel %}
         {% assign firstHeader = false %}
     {% endfor %}
-
+    {% comment %}
     {% assign repeatCount = minHeader | minus: 1 %}
     {% assign repeatCount = lastLevel | minus: repeatCount %}
     {% for i in (1..repeatCount) %}
         {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
     {% endfor %}
+    {% endcomment %}
 {% comment %}
     {% if jekyll_toc != '' %}
         {% assign rootAttributes = '' %}
@@ -125,5 +126,5 @@
             {% capture jekyll_toc %}<{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}>{% endcapture %}
         {% endif %}
     {% endif %}
-    {% endcomment %}
+{% endcomment %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
