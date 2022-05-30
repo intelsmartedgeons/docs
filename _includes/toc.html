@@ -27,6 +27,7 @@
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
     {% capture jekyll_toc %}<{{ listModifier }}>{% endcapture %}
+
     {% for node in nodes %}
         {% if node == "" %}
             {% continue %}
@@ -87,10 +88,10 @@
         {% if currLevel > lastLevel %}
             {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier | append: 'ul_open' }}{{ subMenuClass }}>{% endcapture %}
-            {% endcomment %}
             {% if currLevel == 0 %}
             {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier }}{{ subMenuClass }}>{% endcapture %}
             {% endif %}
+            {% endcomment %}
         {% elsif currLevel < lastLevel %}
             {% assign repeatCount = lastLevel | minus: currLevel %}
             {% for i in (1..repeatCount) %}
