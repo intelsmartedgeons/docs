@@ -109,9 +109,8 @@
     {% for i in (1..repeatCount) %}
         {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
     {% endfor %}
-
+{% comment %}
     {% if jekyll_toc != '' %}
-    {{ 'Hello_1' }}
         {% assign rootAttributes = '' %}
         {% if include.class and include.class != blank %}
             {% capture rootAttributes %} class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
@@ -126,4 +125,5 @@
             {% capture jekyll_toc %}<{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}>{% endcapture %}
         {% endif %}
     {% endif %}
+    {% endcomment %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
