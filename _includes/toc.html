@@ -85,13 +85,13 @@
         {% endif %}
 
         {% if currLevel > lastLevel %}
-            {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier }}{{ subMenuClass }}>{% endcapture %}
+            {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier | append: 'ul_open' }}{{ subMenuClass }}>{% endcapture %}
         {% elsif currLevel < lastLevel %}
             {% assign repeatCount = lastLevel | minus: currLevel %}
-            {% comment %}
             {% for i in (1..repeatCount) %}
                 {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
             {% endfor %}
+            {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
             {% endcomment %}
         {% else %}
