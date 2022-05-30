@@ -77,30 +77,25 @@
                 {% capture anchorAttributes %}{{ anchorAttributes }} class="{{ include.anchor_class | split: '.' | join: ' ' }}"{% endcapture %}
             {% endif %}
 
-            {% capture listItem %}<a{{ anchorAttributes }}>{{ anchorBody }}</a></li>{% endcapture %}
+            {% capture listItem %}<a{{ anchorAttributes }}>{{ anchorBody }}</a>{% endcapture %}
         {% elsif skipNoIDs == true %}
             {% continue %}
         {% else %}
-            {% capture listItem %}{{ anchorBody }}</li>{% endcapture %}
+            {% capture listItem %}{{ anchorBody }}{% endcapture %}
         {% endif %}
 
         {% if currLevel > lastLevel %}
-            {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier }}{{ subMenuClass }}>{% endcapture %}
-            {% endcomment %}
         {% elsif currLevel < lastLevel %}
             {% assign repeatCount = lastLevel | minus: currLevel %}
 
             {% for i in (1..repeatCount) %}
-                {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}> {{ "Within Loop" }} {% endcapture %}
+                {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
             {% endfor %}
-            {% comment %}
+
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
-            {% endcomment %}
         {% else %}
-            {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
-            {% endcomment %}
         {% endif %}
 
         {% capture jekyll_toc %}{{ jekyll_toc }}<li{{ listItemClass }}>{{ listItem }}{% endcapture %}
@@ -115,19 +110,4 @@
         {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
     {% endfor %}
 
-    {% if jekyll_toc != '' %}
-        {% assign rootAttributes = '' %}
-        {% if include.class and include.class != blank %}
-            {% capture rootAttributes %} class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
-        {% endif %}
-
-        {% if include.id and include.id != blank %}
-            {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}
-        {% endif %}
-
-        {% if rootAttributes %}
-            {% assign nodes = jekyll_toc | split: '>' %}
-            {% capture jekyll_toc %}<{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}>{% endcapture %}
-        {% endif %}
-    {% endif %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
