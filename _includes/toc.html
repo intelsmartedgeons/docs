@@ -94,8 +94,9 @@
             {% for i in (1..repeatCount) %}
                 {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
             {% endfor %}
-
+            {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
+            {% endcomment %}
         {% else %}
             {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
