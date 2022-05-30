@@ -87,7 +87,7 @@
         {% if currLevel > lastLevel %}
             {% comment %}
             {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier }}{{ subMenuClass }}>{% endcapture %}
-            {% comment %}
+            {% endcomment %}
         {% elsif currLevel < lastLevel %}
             {% assign repeatCount = lastLevel | minus: currLevel %}
 
