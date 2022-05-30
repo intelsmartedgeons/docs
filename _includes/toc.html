@@ -26,7 +26,7 @@
     {% assign lastLevel = 0 %}
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
-
+    {% comment %}
     {% for node in nodes %}
         {% if node == "" %}
             {% continue %}
@@ -103,7 +103,7 @@
         {% assign lastLevel = currLevel %}
         {% assign firstHeader = false %}
     {% endfor %}
-    {% comment %}
+    
     {% assign repeatCount = minHeader | minus: 1 %}
     {% assign repeatCount = lastLevel | minus: repeatCount %}
     {% for i in (1..repeatCount) %}
