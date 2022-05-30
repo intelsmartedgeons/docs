@@ -92,35 +92,12 @@
             {% endfor %}
         {% endif %}
 
-        {% comment %}
-        {% if currLevel > lastLevel %}
-            {% comment %}
-            {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier | append: 'ul_open' }}{{ subMenuClass }}>{% endcapture %}
-            {% if currLevel == 0 %}
-            {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier }}{{ subMenuClass }}>{% endcapture %}
-            {% endif %}
-            {% endcomment %}
-        {% elsif currLevel < lastLevel %}
-            {% assign repeatCount = lastLevel | minus: currLevel %}
-            {% for i in (1..repeatCount) %}
-                {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
-            {% endfor %}
-
-            {% comment %}
-            {% capture jekyll_toc %}{{ jekyll_toc }}</{{ listModifier }}>{% endcapture %}
-            {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
-            {% endcomment %}
-        {% else %}
-            {% comment %}
-            {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
-            {% endcomment %}
-        {% endif %}
-        {% endcomment %}
-
         {% capture jekyll_toc %}{{ jekyll_toc }}<li{{ listItemClass }}>{{ listItem }}{% endcapture %}
 
         {% assign lastLevel = currLevel %}
         {% assign firstHeader = false %}
     {% endfor %}
+
     {% capture jekyll_toc %}{{ jekyll_toc }}</{{ listModifier }}>{% endcapture %}
+    
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
