@@ -26,6 +26,7 @@
     {% assign lastLevel = 0 %}
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
+    {% capture jekyll_toc %}<{{ listModifier }}>{% endcapture %}
 
     {% for node in nodes %}
         {% if node == "" %}
