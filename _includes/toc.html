@@ -99,8 +99,9 @@
         {% else %}
             {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
         {% endif %}
-
+        {% comment %}
         {% capture jekyll_toc %}{{ jekyll_toc }}<li{{ listItemClass }}>{{ listItem }}{% endcapture %}
+        {% endcomment %}
 
         {% assign lastLevel = currLevel %}
         {% assign firstHeader = false %}
