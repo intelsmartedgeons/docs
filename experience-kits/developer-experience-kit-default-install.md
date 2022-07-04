@@ -158,7 +158,7 @@ Clone the [Developer Experience Kit repo](https://github.com/smart-edge-open/ope
 #### Generate the Configuration File
 Run the following command to generate the `custom.yml` file. It is recommended you generate a new congfiguraion file instead of using the default `default_config.yml` file provided.
 ```Shell.bash
-[Provisioning System] # sudo ./dek_provision.py --init-config > custom.yml`
+[Provisioning System] # sudo ./dek_provision.py --init-config > custom.yml
 ```
 ### Create the Installation Image
 #### Disable Security Features for Default Installation
@@ -174,7 +174,7 @@ platform_attestation_node: false
 To deploy the Developer Experience Kit with security features enabled, see the [advanced installation instructions](/experience-kits/developer-experience-kit-advanced-install.md).
 
 #### Configure the SR-IOV Network Operator
-If you are installing the Developer Experience Kit to a target system that uses a different network adapter than the [validated NIC](https://github.com/smart-edge-open/docs/blob/main/release-notes/release-notes-se-open-DEK-21-12.md), you'll need to update the `custom.yml` file with the exact names of the target node's NIC interfaces. To do this, create a `[cvl_sriov_nics]` section with a `[Debian]` dictionary.
+If you are installing the Developer Experience Kit to a target system that uses a different network adapter than the [validated NIC](https://github.com/smart-edge-open/docs/blob/main/release-notes/release-notes-se-open-DEK-21-12.md), you'll need to update the `custom.yml` file with the exact names of the target node's NIC interfaces. To do this, create a  `[cvl_sriov_nics]` section with a `[Debian]` dictionary.
 
 ```Shell.bash
 # vi custom.yml
