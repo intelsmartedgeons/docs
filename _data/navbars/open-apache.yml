@@ -37,7 +37,7 @@ section:
           - title: Nodus
             path: /docs/components/networking/nodus/?page=building-blocks
             meta_title: 
-            meta_description: 
+            meta_description:
           - title: SR-IOV Network Operator
             path: /docs/components/networking/sriov-network-operator/?page=building-blocks
             meta_title: 
