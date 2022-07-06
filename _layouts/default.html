@@ -61,15 +61,6 @@ Copyright (c) 2021 Intel Corporation
                         //Update Url
                         jQuery(this).attr('href', new_url);
                     }else{
-                        /*if(url.indexOf("https://smart-edge-open.github.io/intel-smart-edge-open/request-license/") != '-1'){
-                            jQuery(this).attr('href', url.replace("/intel-smart-edge-open", ""));
-                        }else{
-                            jQuery(this).attr('href', url.replace(".md", "/"));
-                        }
-                        if(httpUrl == '-1' && httpsUrl == '-1' && hashCheck != '-1'){
-                            //Remove .md From href
-                            jQuery(this).attr('href', url.replace(".md", "/"));
-                        */
                         //Remove .md From href
                         if(url.indexOf('/blob/main') != '-1' && url.indexOf('https://github.com') != '-1' && (url.indexOf('/docs') != '-1' || url.indexOf('/ido-specs') != '-1')){
                             url = url.replace("/blob/main", "");
@@ -79,11 +70,9 @@ Copyright (c) 2021 Intel Corporation
                             jQuery(this).attr('href', url.replace(".md", "/"));
                         }else if((url.includes("/docs") == false) && urlFound == '-1' && httpUrl == '-1' && httpsUrl == '-1'){
                             new_url = (url.startsWith("/") == true) ? base_url + url : base_url + "/" + url;
+                            console.log("Docs : "+new_url);
                             jQuery(this).attr('href', new_url.replace(".md", "/"));
                         }
-                        /*else{
-                            jQuery(this).attr('href', url.replace(".md", "/"));
-                        }*/
                     }
                 }
             });
