@@ -34,10 +34,6 @@ section:
             path: /docs/components/networking/multus/?page=building-blocks
             meta_title: 
             meta_description: 
-          - title: Nodus
-            path: /docs/components/networking/nodus/?page=building-blocks
-            meta_title: 
-            meta_description:
           - title: SR-IOV Network Operator
             path: /docs/components/networking/sriov-network-operator/?page=building-blocks
             meta_title: 
@@ -48,8 +44,8 @@ section:
         meta_title: 
         meta_description:
         section: 
-          - title: KubeVirt
-            path: /docs/components/resource-management/kubevirt/?page=building-blocks
+          - title: CPU Manager
+            path: /docs/components/resource-management/cpu-manager/?page=building-blocks
             meta_title: 
             meta_description:
           - title: Node Feature Discovery
@@ -58,10 +54,6 @@ section:
             meta_description:
           - title: Topology Manager
             path: /docs/components/resource-management/topology-manager/?page=building-blocks
-            meta_title:
-            meta_description:
-          - title: CPU Manager
-            path: /docs/components/resource-management/cpu-manager/?page=building-blocks
             meta_title: 
             meta_description:
 
