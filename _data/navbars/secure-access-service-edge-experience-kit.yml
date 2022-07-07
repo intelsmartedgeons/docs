@@ -20,14 +20,23 @@ section:
         path: /ido-specs/doc/getting-started/kubernetes-dashboard/?page=secure-access-service-edge-experience-kit
   - title: "Building Blocks"
     section:
-      - title: "Node Feature Discovery"
-        path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-node-feature-discovery/?page=secure-access-service-edge-experience-kit
-      - title: "Multiple Interface & PCIe SRIOV"
-        path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-sriov-multiple-interfaces/?page=secure-access-service-edge-experience-kit
-      - title: "Intel® Movidius™ Myriad™ X HDDL"
-        path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open_hddl/?page=secure-access-service-edge-experience-kit
-      - title: "Telemetry"
-        path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-telemetry/?page=secure-access-service-edge-experience-kit
+      # Secure Access Service Edge Experience Kit Updation on 07/07/2022
+      #- title: "Node Feature Discovery"
+      #  path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-node-feature-discovery/?page=secure-access-service-edge-experience-kit
+      #- title: "Multiple Interface & PCIe SRIOV"
+      #  path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-sriov-multiple-interfaces/?page=secure-access-service-edge-experience-kit
+      #- title: "Intel® Movidius™ Myriad™ X HDDL"
+      #  path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open_hddl/?page=secure-access-service-edge-experience-kit
+      #- title: "Telemetry"
+      #  path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-telemetry/?page=secure-access-service-edge-experience-kit
+      - title: Networking
+        section:
+          - title: Multus CNI
+            path: /docs/components/networking/multus/?page=secure-access-service-edge-experience-kit
+          - title: Nodus
+            path: /docs/components/networking/nodus/?page=secure-access-service-edge-experience-kit
+          - title: SR-IOV Network Operator
+            path: /docs/components/networking/sriov-network-operator/?page=secure-access-service-edge-experience-kit
   - title: "Application Onboarding"
     section:
       - title: "Network Edge Application Onboarding"
