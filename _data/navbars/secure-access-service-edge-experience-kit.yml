@@ -7,6 +7,8 @@ section:
   - title: "Overview"
     #path: /ido-specs/doc/reference-architectures/smartedge-open-experience-kit_sdwan/?page=secure-access-service-edge-experience-kit
     path: /docs/experience-kits/secure-access-service-edge/#overview
+  - title: How it works
+    path: /docs/experience-kits/secure-access-service-edge/#how-it-works
   - title: "Getting Started"
     #section:
     #  - title: "Cluster Setup"
