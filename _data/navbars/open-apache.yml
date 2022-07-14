@@ -27,11 +27,11 @@ section:
         path: /docs/developer-experience-kit/advanced-installation/advanced-installation-introduction
         section:
           - title: "Set up security features"
-            path: /docs/developer-experience-kit/default-installation/developer-experience-kit-security-features
+            path: /docs/developer-experience-kit/advanced-installation/developer-experience-kit-security-features
           - title: "Create and flash the installation image"
-            path: /docs/developer-experience-kit/default-installation/create-and-flash-installation-image
+            path: /docs/developer-experience-kit/advanced-installation/create-and-flash-installation-image
           - title: "Install image on target system"
-            path: /docs/developer-experience-kit/default-installation/install-image-target-system
+            path: /docs/developer-experience-kit/advanced-installation/install-image-target-system
   # - title: "Default Installation"
   #   path:
   #   section:
