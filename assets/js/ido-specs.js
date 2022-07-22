@@ -134,12 +134,19 @@ jQuery(document).ready(function(){
 		jQuery('#alertMsg').remove();
 	});
 	 jQuery("#contact-button").click(function() {
-        if(jQuery(this).parent().css("left") == "-280px"){
+        if(jQuery(this).parent().attr('style')){
+            jQuery(this).parent().removeAttr('style')
+            //jQuery(this).parent().animate({"left": "0px"});
+        }
+        else{
+            jQuery(this).parent().animate({"left": "-310px"});
+         }
+        /* if(jQuery(this).parent().css("left") == "-310px"){
             jQuery(this).parent().animate({"left": "0px"});
         }
         else{
             jQuery(this).parent().animate({"left": "-280px"});
-         }
+         } */
       });
 });
 if (jQuery(window).width() < 768){
