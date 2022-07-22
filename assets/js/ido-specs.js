@@ -139,7 +139,7 @@ jQuery(document).ready(function(){
             //jQuery(this).parent().animate({"left": "0px"});
         }
         else{
-            jQuery(this).parent().animate({"left": "-310px"});
+            jQuery(this).parent().animate({"left": "0px"});
          }
         /* if(jQuery(this).parent().css("left") == "-310px"){
             jQuery(this).parent().animate({"left": "0px"});
