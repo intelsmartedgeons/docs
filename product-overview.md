@@ -2,8 +2,8 @@
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
-- [Intel® Smart Edge Open Developer Guide](#intel-smart-edge-open-developer-guide)
-  - [What is Intel Smart Edge?](#what-is-intel-smart-edge-open)
+- [Intel® Smart Edge Developer Guide](#intel-smart-edge-developer-guide)
+  - [What is Intel Smart Edge?](#what-is-intel-smart-edge)
   - [How It Works](#how-it-works)
       - [Control Plane](#control-plane)
       - [Edge Node](#edge-node)
@@ -50,7 +50,7 @@ Common building blocks used across experience kits include:
 
 ## How It Works				
 
-Experience kits are built on top of Kubernetes, a production-grade platform for managing containerized workloads and services. Experience kits customize and extend the Kubernetes control plane and edge node with microservices, third-party applications, extensions, and optimizations. The control plane node and one or more edge nodes form an Intel® Smart Edge edge cluster. 
+Experience kits are built on top of Kubernetes, a production-grade platform for managing containerized workloads and services. Experience kits customize and extend the Kubernetes control plane and edge node with microservices, third-party applications, extensions, and optimizations. The control plane node and one or more edge nodes form an Intel® Smart Edge cluster. 
 
 [![Smart Edge Logical](images/seo-node.png)](images/seo-node.png)
 
@@ -77,7 +77,7 @@ The Intel® Smart Edge control plane is used to configure edge nodes and the ser
 In a single node cluster deployment, control plane services co-exist on the same physical node as the edge node. 
 
 ### Edge Node
-The Intel® Smart Edge edge node manages the edge services, including the APIs used to discover those services. Features of the edge node include:
+The Intel® Smart Edge node manages the edge services, including the APIs used to discover those services. Features of the edge node include:
 
 - Support for the Docker container runtime and virtualization infrastructure (libvirt*, Open vSwitch (OVS), etc.) to support VMs. 
 - Platform pods consisting of services that enable the configuration of hardware resources on the node for a particular deployment, operators for accelerators and device plugins enabling hardware resource allocation to an application pod.
