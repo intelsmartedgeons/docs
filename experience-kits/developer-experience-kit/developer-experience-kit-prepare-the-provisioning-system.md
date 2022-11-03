@@ -5,7 +5,7 @@ Copyright (c) 2022 Intel Corporation
 
 # Prepare the Provisioning System 
 
-Before you can install the Intel® Smart Edge Open Developer Experience Kit, you will need to first prepare the provisioning system by installing the following software:
+Before you can install the Intel® Smart Edge Developer Experience Kit, you will need to first prepare the provisioning system by installing the following software:
 
 - Git
 - Docker
@@ -93,7 +93,7 @@ Run the following commands to install Python3 and related libraries:
 
 ### 4. Create AWS t2.medium Instance (Advanced installation only)
 
-If you plan to install the Intel® Smart Edge Open Developer Experience Kit with security features enabled then you will need to create an AWS t2.medium instance by following the instructions below:
+If you plan to install the Intel® Smart Edge Developer Experience Kit with security features enabled then you will need to create an AWS t2.medium instance by following the instructions below:
 
 1. Create EC2 t2.medium instance (at least) with Ubuntu 20.04 OS image in any geo location.
 2. If the region in which instance is being created does not have default VPC configured, Create VPC and subnet with IPV4 CIDR.

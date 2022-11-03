@@ -58,7 +58,7 @@ Copyright (c) 2022 Intel Corporation
 
 ## Overview
 
-Intel® Smart Edge Open Private Wireless Experience Kit provides a reference blueprint for on-premise 5G deployment with edge services. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, the Private Wireless Experience Kit delivers AI, video, and 5G network functions with optimized performance on Intel edge platforms.
+Intel® Smart Edge Private Wireless Experience Kit provides a reference blueprint for on-premise 5G deployment with edge services. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, the Private Wireless Experience Kit delivers AI, video, and 5G network functions with optimized performance on Intel edge platforms.
 
 The Private Wireless Experience Kit accelerates private 5G deployment with Intel Edge platforms.
 
@@ -110,7 +110,7 @@ The Private Wireless Experience Kit supports two 3rd Generation Intel® Xeon® S
 
 The applications are deployed on the same edge node as the UPF and CU/DU.
 
-The following building blocks are supported in Intel® Smart Edge Open:
+The following building blocks are supported in Intel® Smart Edge:
 
 | Building Blocks                                         | Notes                                                        |
 | ------------------------------------------------ | :----------------------------------------------------------- |
@@ -231,11 +231,11 @@ The Private Wireless Experience Kit offers an EdgeDNS application which acts as 
 
 #### ICX-SP
 
-The Private Wireless Experience Kit is designed to run on standard, Commercial off-the-shelf servers with 3rd Generation Intel® Xeon® Scalable Processors. The experience kit has been validated to run on a Dell Server R750. Please refer to Smart Edge Open 22.04 release notes for more detailed Dell R750 configurations.
+The Private Wireless Experience Kit is designed to run on standard, Commercial off-the-shelf servers with 3rd Generation Intel® Xeon® Scalable Processors. The experience kit has been validated to run on a Dell Server R750. Please refer to Smart Edge 22.04 release notes for more detailed Dell R750 configurations.
 
 #### Accelerators
 
-Hardware accelerators can be used to increase the performance of certain workloads. Use the Intel® Smart Edge Open Kubernetes control plane node to assign accelerators to a specific container whose workload you are targeting.
+Hardware accelerators can be used to increase the performance of certain workloads. Use the Intel® Smart Edge Kubernetes control plane node to assign accelerators to a specific container whose workload you are targeting.
 
 <b>Intel® QAT</b>
 The Intel® QuickAssist Adapter provides customers with a scalable, flexible, and extendable way to offer Intel® QuickAssist Technology (Intel® QAT) crypto acceleration and compression capabilities to their existing product lines. Intel® QuickAssist Technology provides hardware acceleration to assist with the performance demands of securing and routing Internet traffic and other workloads, such as compression and wireless 5G gNB(g-NodeB) algorithm offload, thereby reserving processor cycles for application and control processing.
@@ -247,7 +247,7 @@ The Intel® vRAN Dedicated Accelerator ACC100 Adapter accelerates 5G virtualized
 - Accelerates both 4G and 5G data concurrently.
 - Lowers development cost using commercial off the shelf (COTS) servers.
 - Accommodates space-constrained implementations via a low-profile PCIe* card form factor.
-For more references, see [<b>smartedge-open-acc100</b> ](https://github.com/smart-edge-open/specs/blob/master/doc/building-blocks/enhanced-platform-awareness/smartedge-open-acc100.md) using ACC100 eASIC in Smart Edge Open: Resource Allocation, and Configuration.
+For more references, see [<b>smartedge-open-acc100</b> ](https://github.com/smart-edge-open/specs/blob/master/doc/building-blocks/enhanced-platform-awareness/smartedge-open-acc100.md) using ACC100 eASIC in Smart Edge: Resource Allocation, and Configuration.
 
 #### Hardware BOM
 
@@ -1778,7 +1778,7 @@ For more details, please refer to [Private Wireless Experience Kit Provisioning]
 
 ## Summary and Next Steps
 
-This guide explained how to deploy the Private Wireless Experience Kit. The blueprint for private wireless deployment through Intel® Smart Edge Open efficiently deploys, manages, and optimizes network functions and applications specifically for an on-premises private wireless network. You can continue to customize this deployment to meet your own use cases.
+This guide explained how to deploy the Private Wireless Experience Kit. The blueprint for private wireless deployment through Intel® Smart Edge efficiently deploys, manages, and optimizes network functions and applications specifically for an on-premises private wireless network. You can continue to customize this deployment to meet your own use cases.
 
 ### Next Steps
 - Install the [Wireless Network Ready Intelligent Traffic Management reference implementation.](https://github.com/smart-edge-open/edgeapps/blob/master/applications/wnr-itm-app/README.md)

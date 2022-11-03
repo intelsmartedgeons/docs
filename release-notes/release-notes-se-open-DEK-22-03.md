@@ -17,7 +17,7 @@ Copyright (c) 2022 Intel Corporation
 
 # Overview
 
-The 22.03 release of Intel® Smart Edge Open provides Edge developers with the Developer Experience Kit as a cloud-native platform for testing edge applications.
+The 22.03 release of Intel® Smart Edge provides Edge developers with the Developer Experience Kit as a cloud-native platform for testing edge applications.
 In this release the Developer Experience Kit is updated with:
 
 ## Secure Key Management using KMRA
@@ -27,14 +27,14 @@ In this release the Developer Experience Kit is updated with:
 ## Secure and Trusted Computing
 
 ### Remote Attestation
-- Trusted computing consists primarily of two activities – measurement, and attestation. Measurement is the act of obtaining cryptographic representations for the system state. Attestation is the act of comparing those cryptographic measurements against expected values to determine whether the system booted into an acceptable state. This is key for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge Open supports this feature using Intel® Security Libraries (ISecL).
+- Trusted computing consists primarily of two activities – measurement, and attestation. Measurement is the act of obtaining cryptographic representations for the system state. Attestation is the act of comparing those cryptographic measurements against expected values to determine whether the system booted into an acceptable state. This is key for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge supports this feature using Intel® Security Libraries (ISecL).
 
 ### Enclave Trust with Attestation:
-- Handling sensitive data key requirement for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge Open supports this feature using The Intel® Software Guard Extensions (Intel® SGX). Remote attestation allows a remote party to check that the intended software is securely running within an enclave on a system with the Intel® SGX enabled.
+- Handling sensitive data key requirement for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge supports this feature using The Intel® Software Guard Extensions (Intel® SGX). Remote attestation allows a remote party to check that the intended software is securely running within an enclave on a system with the Intel® SGX enabled.
 
 ## RAN Intelligence and its Application
 
-- With the increased demand for vRAN/Cloud-native RAN deployments O-RAN Alliance has defined a scalable Architecture and Interfaces for deploying 5G network functions and services. Intel® Smart Edge Open DEK supports reference implementation of
+- With the increased demand for vRAN/Cloud-native RAN deployments O-RAN Alliance has defined a scalable Architecture and Interfaces for deploying 5G network functions and services. Intel® Smart Edge DEK supports reference implementation of
 ### ORAN Near Real-Time RIC:
 - A logical function that enables near-real-time control and optimization of O-RAN elements and resources via fine-grained data collection and actions. DEK uses ONF SD-RAN as a reference implementation for this.
 ### xAPP:
@@ -42,7 +42,7 @@ In this release the Developer Experience Kit is updated with:
 
 ## Reference Implementation on Intel Developer Catalog
 
-- EII/PCB Defect detection, Telehealth Remote Monitoring, Intelligent Traffic Management and Smart VR- Live Streaming of Immersive Media Reference Implementation are  supported on Intel® Smart Edge Open 21.12 onwards.
+- EII/PCB Defect detection, Telehealth Remote Monitoring, Intelligent Traffic Management and Smart VR- Live Streaming of Immersive Media Reference Implementation are  supported on Intel® Smart Edge 21.12 onwards.
 - These Reference Implementation are available at the Intel® Developer Catalog https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest&f:@emtcontenttype_en=[Software%20Reference%20Implementations]
 
 
@@ -80,7 +80,7 @@ Ubuntu 20.04.2 LTS (Focal Fossa)
 
 ### Servers
 
-The 22.03 release of Intel® Smart Edge Open supports the following hardware platform:
+The 22.03 release of Intel® Smart Edge supports the following hardware platform:
 -  Dell PowerEdge R750 Server motherboard
 
 

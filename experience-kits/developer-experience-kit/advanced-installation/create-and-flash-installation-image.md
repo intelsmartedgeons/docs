@@ -5,7 +5,7 @@ Copyright (c) 2021 Intel Corporation
 
 # Create the Installation Image
 
-This section explains the steps for creating and flashing the installation image when completing the advanced installation of the Intel® Smart Edge Open Developer Experience Kit.
+This section explains the steps for creating and flashing the installation image when completing the advanced installation of the Intel® Smart Edge Developer Experience Kit.
 
 ## Optional: Configure Provisioning Services for Enabled Security Features
 

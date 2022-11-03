@@ -39,9 +39,9 @@ Copyright (c) 2022 Intel Corporation
 
 ## Overview
 
-Intel® Smart Edge Open provide customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, experience kits let you deliver AI, video, and other services optimized for performance at the edge.
+Intel® Smart Edge provide customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, experience kits let you deliver AI, video, and other services optimized for performance at the edge.
 
-The Secure Access Service Edge (SASE) Experience Kit (EK) offers an integrated solution with SD-WAN connectivity and network security capabilities on the Intel® Smart Edge Open edge platform.
+The Secure Access Service Edge (SASE) Experience Kit (EK) offers an integrated solution with SD-WAN connectivity and network security capabilities on the Intel® Smart Edge edge platform.
 SASE EK brings 3 fundamental capabilities for users:
 - Secure IPsec connection between edge clusters via POP cluster over WAN.
 - Platform Security capabilities.
@@ -64,7 +64,7 @@ The Secure Access Service Edge Experience Kit deploys a reference architecture c
 - The SASE Edge Cluster is typically located on-premises. It hosts edge services and applications.
 - The SASE POP Cluster provides similar functionality as the edge cluster, but sits at the provider network point of presence (POP). A typical use case for the POP cluster is to provide secure traffic forwarding between edges via an IPSec tunnel.
 
-SASE POP cluster centralizes and hosts network security capability in POP data center based on Intel® Smart Edge Open cloud native design methodology, so that traffic from enterprise edge node gets a series of security services by Service Function Chain (SFC) when going through POP DC or being forwarded by POP DC servers.
+SASE POP cluster centralizes and hosts network security capability in POP data center based on Intel® Smart Edge cloud native design methodology, so that traffic from enterprise edge node gets a series of security services by Service Function Chain (SFC) when going through POP DC or being forwarded by POP DC servers.
 
 Below is the architecture of the edge and POP clusters instantiated with platform attestation and application security features enabled. The cloud cluster hosts remote attestation services for the security features. These services are deployed on an Amazon Web Service (AWS) EC2 instance. As this architecture shows, SD-WAN functions will be available in a future release.
 
@@ -237,7 +237,7 @@ The `deploy.sh` script installs all required packages and deploys the single nod
 
 ### Prepare the Provisioning System
 
-The ESP is used by all experience kits to provision the system used to host the edge cluster. For more details about the ESP, including troubleshooting suggestions, please refer to the [Smart Edge Open Provisioning Process](https://smart-edge-open.github.io/docs/experience-kits/provisioning/provisioning/).
+The ESP is used by all experience kits to provision the system used to host the edge cluster. For more details about the ESP, including troubleshooting suggestions, please refer to the [Smart Edge Provisioning Process](https://smart-edge-open.github.io/docs/experience-kits/provisioning/provisioning/).
 
 The following steps will walk you through installing software to the provisioning system, including Git, Docker and Docker Compose, and Python.
 
@@ -364,7 +364,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 #### Check the Status of the Installation
 
 When logging in using remote console or SSH, a message will be displayed that informs about status of the deployment, for example:
-```Smart Edge Open Deployment Status: in progress```
+```Smart Edge Deployment Status: in progress```
 
 Three statuses are possible:
 - `in progress` - Deployment is in progress.
@@ -390,7 +390,7 @@ This guide walked you through installing the Secure Access Service Edge Experien
 An upcoming release of the Secure Edge Service Access Experience Kit will integrate the ICN-SDWAN solution. This solution will provide the followings:
 - Support for SD-WAN CNF as gateway on POP and edge clusters.
 - Enable the SD-WAN overlay controller to automatically setup secured IPsec tunnels between POP and edge clusters.
-- Demonstrates access to edge applications with SD-WAN CNF management and forwarding on the Intel® Smart Edge Open edge computing platform.
+- Demonstrates access to edge applications with SD-WAN CNF management and forwarding on the Intel® Smart Edge edge computing platform.
 
 Refer to [https://github.com/akraino-edge-stack/icn-sdwan](https://github.com/akraino-edge-stack/icn-sdwan).
 

@@ -2,7 +2,7 @@
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2022 Intel Corporation
 ```
-# The Intel® Smart Edge Open Developer Experience Kit building blocks
+# The Intel® Smart Edge Developer Experience Kit building blocks
 
 Installing the Developer Experience Kit will install Kubernetes as well as the following building blocks on your edge node and controller.
 
@@ -42,4 +42,4 @@ Installing the Developer Experience Kit will install Kubernetes as well as the f
 
 ### Next
 
-The next section explains how to install the Intel® Smart Edge Open Developer Experience Kit. 
+The next section explains how to install the Intel® Smart Edge Developer Experience Kit. 

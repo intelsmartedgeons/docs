@@ -27,15 +27,15 @@ The role of the Intel Wireless FEC Accelerator Operator is to orchestrate and ma
 
 ## SR-IOV Network Operator configuration and usage
 
-To deploy the SR-IOV FEC Operator to the Intel® Smart Edge Open cluster, `sriov_fec_operator_enable: True` and `sriov_fec_operator_configure_enable: True` must be set in the `inventory/default/group_vars/all/10-default.yml` file (or in an alternative deployment `all.yml` file under `./deployments/<deployment_name>` which will take precedence). The flags enable the installation of the Operator and configuration of the device during provisioning respectively. This component is disabled by default in [Developer Experience Kit](../../experience-kits/developer-experience-kit.md). This will perform Operator install and label every Edge Node containing the Intel vRAN dedicated accelerator ACC100 accordingly. The SR-IOV Device plugin will be deployed on labeled node once the operator is installed.
-SR-IOV FEC Operator is deployed using Makefiles and it requires additional packages to be installed, these packages are installed by Intel® Smart Edge Open together with Operator deployment.
+To deploy the SR-IOV FEC Operator to the Intel® Smart Edge cluster, `sriov_fec_operator_enable: True` and `sriov_fec_operator_configure_enable: True` must be set in the `inventory/default/group_vars/all/10-default.yml` file (or in an alternative deployment `all.yml` file under `./deployments/<deployment_name>` which will take precedence). The flags enable the installation of the Operator and configuration of the device during provisioning respectively. This component is disabled by default in [Developer Experience Kit](../../experience-kits/developer-experience-kit.md). This will perform Operator install and label every Edge Node containing the Intel vRAN dedicated accelerator ACC100 accordingly. The SR-IOV Device plugin will be deployed on labeled node once the operator is installed.
+SR-IOV FEC Operator is deployed using Makefiles and it requires additional packages to be installed, these packages are installed by Intel® Smart Edge together with Operator deployment.
 Images for Operator are built from source and pushed to the local Harbour registry provided by the Smart Edge deployment.
 
 > **NOTE:** The `igb_uio` driver needs to be available on the platform for the operator to work - see [limitations](#limitations) for steps enabling the deployment of the driver.
 
 ### Configuration
 
-The following section describes the configuration steps required to configure the FEC devices during the provisioning of Smart Edge Open.
+The following section describes the configuration steps required to configure the FEC devices during the provisioning of Smart Edge.
 
 #### SR-IOV FEC Operator configuration variables
 
@@ -165,7 +165,7 @@ PCIDEVICE_INTEL_COM_INTEL_FEC_ACC100=0000:b0:00.0
 ## Limitations
 
 There is an expectation that the PF and VF drivers to be used for the handling of the device are provided by platform.
-This is the case with Smart Edge Open platform, the `igb_uio` is provided by enabling appropriate role with the `install_userspace_drivers_enable: true` flag in `inventory/default/group_vars/all/10-default.yml` (or alternative `all.yml` file if deploying specific deployment under `./deployments/<deployment name>`).
+This is the case with Smart Edge platform, the `igb_uio` is provided by enabling appropriate role with the `install_userspace_drivers_enable: true` flag in `inventory/default/group_vars/all/10-default.yml` (or alternative `all.yml` file if deploying specific deployment under `./deployments/<deployment name>`).
 
 ## Reference
 

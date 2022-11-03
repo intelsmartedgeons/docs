@@ -12,7 +12,7 @@ To address this, two key networking features must be enabled:
 1) Enable a Kubernetes like orchestration environment to provision more than one interface to the application and network function pods.
 2) Enable the allocation of dedicated hardware interfaces to application and network function pods.
 
-To enable multiple interface support in pods, Intel® Smart Edge Open uses the Multus\* container network interface. [Multus CNI](https://github.com/k8snetworkplumbingwg/multus-cni) is a container network interface (CNI) plugin for Kubernetes that enables the attachment of multiple network interfaces to pods.
+To enable multiple interface support in pods, Intel® Smart Edge uses the Multus\* container network interface. [Multus CNI](https://github.com/k8snetworkplumbingwg/multus-cni) is a container network interface (CNI) plugin for Kubernetes that enables the attachment of multiple network interfaces to pods.
 
 ## How It Works
 

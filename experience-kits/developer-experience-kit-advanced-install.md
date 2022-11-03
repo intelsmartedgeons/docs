@@ -3,13 +3,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
 
-# Intel® Smart Edge Open Developer Experience Kit -- Advanced Installation Instructions
+# Intel® Smart Edge Developer Experience Kit -- Advanced Installation Instructions
 
 ## Overview
 
-Intel® Smart Edge Open experience kits provide customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, experience kits let you deliver AI, video, and other services optimized for performance at the edge.
+Intel® Smart Edge experience kits provide customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance compute, experience kits let you deliver AI, video, and other services optimized for performance at the edge.
 
-The [Developer Experience Kit](https://github.com/smart-edge-open/open-developer-experience-kits) lets you easily install and instantiate an Intel® Smart Edge Open edge cluster. Once the cluster has been installed, you can onboard edge applications and run reference implementations, which are example end-to-end solutions built on Intel® Smart Edge Open, to get familiar with operating a stand-alone edge node or to start creating your own solution.
+The [Developer Experience Kit](https://github.com/smart-edge-open/open-developer-experience-kits) lets you easily install and instantiate an Intel® Smart Edge edge cluster. Once the cluster has been installed, you can onboard edge applications and run reference implementations, which are example end-to-end solutions built on Intel® Smart Edge, to get familiar with operating a stand-alone edge node or to start creating your own solution.
 
 You can choose to create an edge node with integrated platform platform security features including:
 - Platform attestation using Intel® Security Libraries for Data Center (Intel® SecL - DC)
@@ -26,21 +26,21 @@ Developer Experience Kit consists of two clusters.
 - DEK cluster in the cloud that hosts IsecL and SGX control plane services. These control plane services enable platform attestation and Secure enclave for Edge applications and services. 
 - DEK cluster at the edge (typically on-premises) that hosts edge services and applications. 
 
-[![Smart Edge Open Developer Experience Kit - Deployment Diagram](images/dek-deploy.png)](images/dek-deploy.png)
+[![Smart Edge Developer Experience Kit - Deployment Diagram](images/dek-deploy.png)](images/dek-deploy.png)
 
 Let us now look at the components stack of DEK edge and cloud cluster. 
 
-[![Smart Edge Open Developer Experience Kit - Edge Node Component Diagram](images/dek-node-component-diagram.png)](images/dek-node-component-diagram.png)
+[![Smart Edge Developer Experience Kit - Edge Node Component Diagram](images/dek-node-component-diagram.png)](images/dek-node-component-diagram.png)
 
 *Developer Experience Kit edge node with Intel® SecL-DC attestation enabled*
 
 The integrated security features require that remote attestation services be deployed on an Amazon Web Services (AWS) EC2 instance. 
 
-[![Smart Edge Open Developer Experience Kit - IsecL Controller and SGX DCAP Node Component Diagram](images/verification-node-component-diagram.png)](images/verification-node-component-diagram.png)
+[![Smart Edge Developer Experience Kit - IsecL Controller and SGX DCAP Node Component Diagram](images/verification-node-component-diagram.png)](images/verification-node-component-diagram.png)
 
 *Remote attestation services deployed as a controller node on AWS*
 
-The Developer Experience Kit uses the [Edge Software Provisioner (ESP)](https://github.com/intel/Edge-Software-Provisioner), which automates the process of provisioning bare-metal or virtual machines with an operating system and software stack. Intel® Smart Edge Open provides a fork of the [Ubuntu OS ESP Profile](https://github.com/intel/rni-profile-base-ubuntu) tailored for its specific needs.
+The Developer Experience Kit uses the [Edge Software Provisioner (ESP)](https://github.com/intel/Edge-Software-Provisioner), which automates the process of provisioning bare-metal or virtual machines with an operating system and software stack. Intel® Smart Edge provides a fork of the [Ubuntu OS ESP Profile](https://github.com/intel/rni-profile-base-ubuntu) tailored for its specific needs.
 
 ## Building Blocks
 
@@ -84,7 +84,7 @@ The instructions below walk you through provisioning the operating system and De
 
 After completing these instructions, you will have created an edge node cluster capable of hosting edge applications. You can then optionally install reference implementations or onboard edge applications. If you have chosen to enable security features, you will be able to run sample applications that demonstrate their use.
 
-[![Smart Edge Open Developer Experience Kit Edge Node Component Diagram](images/dek-workflow-diagram.png)](images/dek-workflow-diagram.png)
+[![Smart Edge Developer Experience Kit Edge Node Component Diagram](images/dek-workflow-diagram.png)](images/dek-workflow-diagram.png)
 
 ### Requirements
 
@@ -165,10 +165,10 @@ The Developer Experience Kit provides a command line utility (`dek_provision.py`
 Intel® Edge Software Provisioner toolchain to deliver a smooth installation experience.
 
 <!--
-The Intel® Smart Edge Open provisioning process can rely on the experience kit's default configuration or
+The Intel® Smart Edge provisioning process can rely on the experience kit's default configuration or
 a configuration provided by the system operator. In the case of the default configuration, the
 provisioning process is a little simpler and as such it is suggested as a good starting point for
-people new to the Smart Edge Open solution.
+people new to the Smart Edge solution.
 -->
 
 <!-- #### Quick Start (Default Configuration) -->
@@ -361,7 +361,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 #### Check the Status of the Installation
 
 When logging in using remote console or SSH, a message will be displayed that informs about status of the deployment, for example:
-```Smart Edge Open Deployment Status: in progress```
+```Smart Edge Deployment Status: in progress```
 
 Three statuses are possible:
 - `in progress` - Deployment is in progress.
@@ -381,7 +381,7 @@ Find detailed information on provisioning process and on resolving common instal
 
 ## Summary and Next Steps
 
-In this guide, you created an Intel® Smart Edge Open edge node cluster capable of hosting edge applications. You can now install sample applications, or reference implementations downloaded from from the Intel® Developer Catalog
+In this guide, you created an Intel® Smart Edge edge node cluster capable of hosting edge applications. You can now install sample applications, or reference implementations downloaded from from the Intel® Developer Catalog
 - Learn how to [onboard a sample application](/application-onboarding/application-onboarding-cmdline.md) to your cluster.
 - Download and run [reference implementations from the Intel® Developer Catalog](https://www.intel.com/smart-edge-open-samples)
 - Learn how to run sample SGX openVINO application which uses Intel SGX for running secure workloads inside an enclave(Only if SGX feature is enabled in edge node) [Intel SGX OpenVINO sample application](https://github.com/smart-edge-open/edgeapps/blob/main/applications/sgx/openvino-ssd/README.md)

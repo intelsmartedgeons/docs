@@ -3,11 +3,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
 
-# Onboarding Applications to an Intel® Smart Edge Open Cluster
+# Onboarding Applications to an Intel® Smart Edge Cluster
 
 ## Overview
 
-Intel® Smart Edge Open uses Helm Charts to onboard applications to edge node clusters. 
+Intel® Smart Edge uses Helm Charts to onboard applications to edge node clusters. 
 
 In this guide, you'll use the Helm command-line interface (CLI) to install an example application to an edge cluster. Once you've installed the application, you'll verify it's running on the cluster and then uninstall it.
 
@@ -17,7 +17,7 @@ These instructions apply to clusters created by deploying the [Developer Experie
 
 ### Requirements
 #### Hardware
-- An Intel® Smart Edge Open cluster that has been deployed by running the [Developer Experience Kit](/experience-kits/developer-experience-kit.md). 
+- An Intel® Smart Edge cluster that has been deployed by running the [Developer Experience Kit](/experience-kits/developer-experience-kit.md). 
 
 #### Software
 The Helm v3 CLI must be installed on the system hosting the cluster. For instructions, see the [Helm documentation](https://helm.sh/docs/intro/install/)

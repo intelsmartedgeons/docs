@@ -27,7 +27,7 @@ _Figure - Pod deployment with Topology Manager_
 
 ### Enable Topology Manager
 
-Set policy to `best-effort` in the ESP provisioning configuration file (before Smart Edge Open deployment):
+Set policy to `best-effort` in the ESP provisioning configuration file (before Smart Edge deployment):
 
 - generate a custom configuration file with `./dek_provision.py --init-config > custom.yml`
 - edit generated file and set `topology_manager: policy` under `group vars: all:`, e.g.

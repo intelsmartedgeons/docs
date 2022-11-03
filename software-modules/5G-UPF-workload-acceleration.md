@@ -3,9 +3,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2022 Intel Corporation
 ```
 
-# Intel Software Modules for 5G UPF with Intel® Smart Edge Open
+# Intel Software Modules for 5G UPF with Intel® Smart Edge
 
-As part of the growing network edge to deliver the right latency and bandwidth, Intel offers a set of software modules with Intel® Smart Edge Open to accelerate 5G user plane 
+As part of the growing network edge to deliver the right latency and bandwidth, Intel offers a set of software modules with Intel® Smart Edge to accelerate 5G user plane 
 function (UPF) workload capabilities.  These software modules are fully optimized on Intel® Xeon® processors and offer the following key benefits to software developers for 
 their service offerings:
 - Optimized UPF deployment in an on-premises or network infrastructure edge.

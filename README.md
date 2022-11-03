@@ -3,18 +3,18 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
 
-# Intel® Smart Edge Open
-Intel® Smart Edge Open simplifies the process of creating edge solutions capable
+# Intel® Smart Edge
+Intel® Smart Edge simplifies the process of creating edge solutions capable
 of hosting network functions alongside AI, media processing, and security workloads.
 
-Intel® Smart Edge Open brings together tools from across the cloud-native
+Intel® Smart Edge brings together tools from across the cloud-native
 landscape that have been extended, and optimized into blueprints for
 building edge platforms. This toolkit is designed to meet the challenges
 of edge computing, such as resource constraints, network performance, and security.
 
 ## Getting Started
 ### Developer Experience Kit
-The Intel® Smart Edge Open Developer Experience Kit lets you
+The Intel® Smart Edge Developer Experience Kit lets you
 explore the toolkit under an Apache 2.0 license. This foundational kit can be used to create solutions for any edge location.
 
 Find instructions for installing the Developer Experience Kit from GitHub in the
@@ -23,7 +23,7 @@ Find instructions for installing the Developer Experience Kit from GitHub in the
 Alternatively, you can download and run the Developer Experience Kit as a software package from the
 [Intel Developer Catalog](https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/smart-edge-open-developer-experience-kit.html).
 
-Reference implementations highlighting end-to-end solutions built on Intel® Smart Edge Open
+Reference implementations highlighting end-to-end solutions built on Intel® Smart Edge
 are available for the Developer Experience Kit. [Download reference implementations](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/full-catalog.html?s=Newest&q=%22smart+edge+open%22).
 
 ### Location-Specific Experience Kits
@@ -31,7 +31,7 @@ As cloud architectures disaggregate in the era of 5G, new locations are emerging
 candidates for compute workloads that can deliver capabilities and experiences previously not possible.
 These new edges include the enterprise, locations within the telco infrastructure, and hyperscaler points of presence.
 
-Intel® Smart Edge Open offers a set of experience kits customized for the requirements of specific edge locations:
+Intel® Smart Edge offers a set of experience kits customized for the requirements of specific edge locations:
 - The [5G Private
 Wireless Experience Kit](https://smart-edge-open.github.io/docs/experience-kits/private-wireless-experience-kit)
 and the [uCPE Experience Kit](https://smart-edge-open.github.io/ido-specs/doc/reference-architectures/smartedge-open-experience-kit_sdwan)

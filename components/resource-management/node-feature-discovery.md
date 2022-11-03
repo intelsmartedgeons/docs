@@ -52,7 +52,7 @@ NFD is enabled by default and does not require any configuration or user input.
 
 ### Disable NFD add-on
 
-NFD can be disabled by changing the `ne_nfd_enable` variable to `false` in the ESP provisioning configuration file (before Smart Edge Open deployment):
+NFD can be disabled by changing the `ne_nfd_enable` variable to `false` in the ESP provisioning configuration file (before Smart Edge deployment):
 
 - generate a custom configuration file with `./dek_provision.py --init-config > custom.yml`
 - edit generated file and set `ne_nfd_enable` under `group vars: all:`, e.g.

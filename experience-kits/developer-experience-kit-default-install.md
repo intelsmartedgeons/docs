@@ -3,11 +3,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2022 Intel Corporation
 ```
 
-# Intel® Smart Edge Open Developer Experience Kit -- Default Installation Instructions
+# Intel® Smart Edge Developer Experience Kit -- Default Installation Instructions
 
 ## Overview
 
-Intel® Smart Edge Open experience kits let you quickly deploy an Intel® Smart Edge Open edge cluster. The cluster serves as a platform for building solutions that combine cloud native technologies, wireless networking, and high-performance compute to deliver AI, video, and other services optimized for performance at the edge.
+Intel® Smart Edge experience kits let you quickly deploy an Intel® Smart Edge edge cluster. The cluster serves as a platform for building solutions that combine cloud native technologies, wireless networking, and high-performance compute to deliver AI, video, and other services optimized for performance at the edge.
 
 Experience kits are made up of building blocks, stand-alone blocks of code that provide specific functionality in the overall architecture, such as telemetry or support for accelerators. When you deploy an experience kit, the kit deploys its building blocks to your system. The [Developer Experience Kit](https://github.com/smart-edge-open/open-developer-experience-kits) provides a set of building blocks designed to support a variety of edge computing use cases.
 
@@ -15,9 +15,9 @@ Experience kits are made up of building blocks, stand-alone blocks of code that 
 
 The Developer Experience Kit contains building blocks for containerized networking, resource management, and telemetry. 
 
-[![Smart Edge Open Developer Experience Kit - Edge Node Component Diagram](images/dek-component-diagram.png)](images/dek-component-diagram.png)
+[![Smart Edge Developer Experience Kit - Edge Node Component Diagram](images/dek-component-diagram.png)](images/dek-component-diagram.png)
 
-*Intel® Smart Edge Open Developer Experience Kit building blocks*
+*Intel® Smart Edge Developer Experience Kit building blocks*
 
 The Developer Experience Kit uses Intel's [Edge Software Provisioner (ESP)](https://github.com/intel/Edge-Software-Provisioner) to streamline deployment of the edge node cluster. ESP automates provisioning the operating system and software stack of the hardware that hosts the cluster. 
 
@@ -47,7 +47,7 @@ The instructions below walk you through installing the Developer Experience Kit 
 
 After completing these instructions, you will have created an edge node cluster capable of hosting edge applications. You can then install reference implementations or onboard edge applications to the cluster. 
 
-[![Smart Edge Open Developer Experience Kit Workflow Diagram](images/dek-workflow-diagram.png)](images/dek-workflow-diagram.png)
+[![Smart Edge Developer Experience Kit Workflow Diagram](images/dek-workflow-diagram.png)](images/dek-workflow-diagram.png)
 
 ### Requirements
 
@@ -240,7 +240,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 #### Check the Status of the Installation
 
 When logging in using remote console or SSH, a message will be displayed with the status of the deployment. For example:
-```Smart Edge Open Deployment Status: in progress```
+```Smart Edge Deployment Status: in progress```
 
 One of three statuses will be displayed:
 - `in progress` - Deployment is in progress.
@@ -260,6 +260,6 @@ Find detailed information on provisioning process and on resolving common instal
 
 ## Summary and Next Steps
 
-In this guide, you created an Intel® Smart Edge Open edge node cluster capable of hosting edge applications. You can now install sample applications, or reference implementations downloaded from from the Intel® Developer Catalog
+In this guide, you created an Intel® Smart Edge edge node cluster capable of hosting edge applications. You can now install sample applications, or reference implementations downloaded from from the Intel® Developer Catalog
 - Learn how to [onboard a sample application](/application-onboarding/application-onboarding-cmdline.md) to your cluster.
 - Download and run [reference implementations from the Intel® Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=ContentType&q=%22smart%20edge%20open%22)

@@ -3,10 +3,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
 
-# Intel® Smart Edge Open Telemetry Documentation
+# Intel® Smart Edge Telemetry Documentation
 
 ## Overview
-Intel® Smart Edge Open comes with a set of telemetry components, providing user with the ability to monitor the performance and health of the cluster nodes. This support allows users to retrieve information about the platform, the underlying hardware, cluster, and applications deployed. The data gathered by telemetry can be used to visualize metrics and resource consumption, set up alerts for certain events, and aid in making scheduling decisions based on the received telemetry.
+Intel® Smart Edge comes with a set of telemetry components, providing user with the ability to monitor the performance and health of the cluster nodes. This support allows users to retrieve information about the platform, the underlying hardware, cluster, and applications deployed. The data gathered by telemetry can be used to visualize metrics and resource consumption, set up alerts for certain events, and aid in making scheduling decisions based on the received telemetry.
 
 Currently, the support for telemetry is focused on metrics; support for application tracing telemetry is planned in the future.
 
@@ -17,7 +17,7 @@ Telemetry bundle is installed by the following experience kits:
 
 ## How It Works
 
-The telemetry components used in Intel® Smart Edge Open are deployed from the Edge Controller as Kubernetes* (K8s) pods. Components for telemetry support include:
+The telemetry components used in Intel® Smart Edge are deployed from the Edge Controller as Kubernetes* (K8s) pods. Components for telemetry support include:
 
 - collectors
 - metric aggregators
@@ -31,8 +31,8 @@ Depending on the role of the component, it is deployed as either a Deployment or
 <img style="display: block; margin: auto;" alt="OpenDEK telemetry overview" src="images/OpenDek_Telemetry.svg">
 
 
-The deployment of telemetry components in Intel® Smart Edge Open is easily configurable from the developer-experience-kits-open (DEK). The deployment of the Grafana dashboard is optional (telemetry_grafana_enable enabled by default).
-All flags can be changed in ESP provisioning configuration file (before Smart Edge Open deployment):
+The deployment of telemetry components in Intel® Smart Edge is easily configurable from the developer-experience-kits-open (DEK). The deployment of the Grafana dashboard is optional (telemetry_grafana_enable enabled by default).
+All flags can be changed in ESP provisioning configuration file (before Smart Edge deployment):
 
 - generate a custom configuration file with `./dek_provision.py --init-config > custom.yml`
 - edit generated file and set telemetry flavor under `group vars: all:`, e.g.
@@ -56,7 +56,7 @@ profiles:
 
 ### Telegraf
 
-Telegraf is a daemon/collector enabling the collection of hardware metrics from computers and network equipment.In Intel® Smart Edge Open, telegraf is supported with the help of _Intel® Observability Telegraf_, a custom in-house built version of Telegraf docker image containing additional dependencies for Intel supported plugins (like for example _Intel® Powerstat_ or _RASdaemon_). In Intel® Smart Edge Open, Telegraf is deployed as a K8s DaemonSet on every available Edge Node, and it is deployed as a privileged container running in host network.
+Telegraf is a daemon/collector enabling the collection of hardware metrics from computers and network equipment.In Intel® Smart Edge, telegraf is supported with the help of _Intel® Observability Telegraf_, a custom in-house built version of Telegraf docker image containing additional dependencies for Intel supported plugins (like for example _Intel® Powerstat_ or _RASdaemon_). In Intel® Smart Edge, Telegraf is deployed as a K8s DaemonSet on every available Edge Node, and it is deployed as a privileged container running in host network.
 
 #### Plugins
 
@@ -81,17 +81,17 @@ Informaation about collected metrics and troubleshooting for a specific plugin c
 Due to Telegraf architecture not supporting pull model by default (like for example Node Exporter which guarantee that collects fresh metrics on each pull), the collection interval is specified to half of polling interval of Prometheus set via `telemetry_prometheus_scrape_interval_seconds` variable. For more information please refer to Prometheus' documentation.
 ### NodeExporter
 
-Node Exporter is a Prometheus exporter that exposes hardware and OS metrics of \*NIX kernels. The metrics are gathered within the kernel and exposed on a web server so they can be scraped by Prometheus. In Intel® Smart Edge Open, the Node Exporter pod is deployed as a K8s Daemonset; it is a privileged pod, using host networking that runs on every Edge Node in the cluster. It is enabled by default by DEK.
+Node Exporter is a Prometheus exporter that exposes hardware and OS metrics of \*NIX kernels. The metrics are gathered within the kernel and exposed on a web server so they can be scraped by Prometheus. In Intel® Smart Edge, the Node Exporter pod is deployed as a K8s Daemonset; it is a privileged pod, using host networking that runs on every Edge Node in the cluster. It is enabled by default by DEK.
 
 Node exporter is configured to expose the [default set of collectors and metrics](https://github.com/prometheus/node_exporter/tree/v1.0.0-rc.0#enabled-by-default). Support for distinct collector and metrics vary depending on Operating System and hardware configuration - for details refer to Node Exporter specification.
 
-In Intel® Smart Edge Open metrics obtained by NodeExporter are subject to `node_<metric_name>` pattern.
+In Intel® Smart Edge metrics obtained by NodeExporter are subject to `node_<metric_name>` pattern.
 
 Node Exporter is part of minimal DEK telemetry, it can only be disabled by disabling telemetry altogether.
 
 ### Cadvisor
 
-The cAdvisor is a running daemon that provides information about containers running in the cluster. It collects and aggregates data about running containers such as resource usage, isolation parameters, and network statistics. Once the data is processed, it is exported. The data can be easily obtained by metrics monitoring tools such as Prometheus. In Intel® Smart Edge Open, cAdvisor is deployed as a K8s daemonset on every Edge Node and scraped by Prometheus. Cadvisor deployment can be disabled by setting the `telemetry_cadvisor_enable` flag to `false` in provisioning configuration file.
+The cAdvisor is a running daemon that provides information about containers running in the cluster. It collects and aggregates data about running containers such as resource usage, isolation parameters, and network statistics. Once the data is processed, it is exported. The data can be easily obtained by metrics monitoring tools such as Prometheus. In Intel® Smart Edge, cAdvisor is deployed as a K8s daemonset on every Edge Node and scraped by Prometheus. Cadvisor deployment can be disabled by setting the `telemetry_cadvisor_enable` flag to `false` in provisioning configuration file.
 
 #### Cadvisor and performance
 
@@ -111,7 +111,7 @@ Prometheus is an open-source, community-driven toolkit for systems monitoring an
 
 The main idea behind Prometheus is that it defines a unified metrics data format that can be hosted as part of any application that incorporates a simple web server. The data can be then scraped (downloaded) and processed by Prometheus using a simple HTTP/HTTPS connection.
 
-In Intel® Smart Edge Open, Prometheus is deployed as a K8s Deployment with a single pod/replica on the EdgeNode. It is configured out of the box to scrape all other telemetry endpoints/collectors enabled in Intel® Smart Edge Open and gather data from them. Prometheus is part of minimal DEK telemetry, it can only be disabled by disabling telemetry altogether.
+In Intel® Smart Edge, Prometheus is deployed as a K8s Deployment with a single pod/replica on the EdgeNode. It is configured out of the box to scrape all other telemetry endpoints/collectors enabled in Intel® Smart Edge and gather data from them. Prometheus is part of minimal DEK telemetry, it can only be disabled by disabling telemetry altogether.
 
 #### Prometheus' collection interval
 
@@ -133,7 +133,7 @@ Since 22.03 Prometheus dashboard can be enabled before the installation by setti
 
 ### Grafana
 
-Grafana is an open-source visualization and analytics software. It takes the data provided from external sources and displays relevant data to the user via dashboards. It enables the user to create customized dashboards based on the information the user wants to monitor and allows for the provision of additional data sources. In Intel® Smart Edge Open, the Grafana pod is deployed as a K8s Deployment type and is by default provisioned with data from Prometheus. It is enabled by default in DEK and can be enabled/disabled by changing the `telemetry_grafana_enable` flag (in provisioning config file). The detailed usage of Grafana will be presented in the "How To" section.
+Grafana is an open-source visualization and analytics software. It takes the data provided from external sources and displays relevant data to the user via dashboards. It enables the user to create customized dashboards based on the information the user wants to monitor and allows for the provision of additional data sources. In Intel® Smart Edge, the Grafana pod is deployed as a K8s Deployment type and is by default provisioned with data from Prometheus. It is enabled by default in DEK and can be enabled/disabled by changing the `telemetry_grafana_enable` flag (in provisioning config file). The detailed usage of Grafana will be presented in the "How To" section.
 
 Default account is created with username `admin` and random password. Method of obtaining this password is shown in "How to" section.
 
@@ -156,7 +156,7 @@ Steps:
 
 Requirements:
 
-- Access to the node configured for `kubectl` usage with Intel® Smart Edge Open cluster.
+- Access to the node configured for `kubectl` usage with Intel® Smart Edge cluster.
 - Network connection to EdgeNode
 - One of [Grafana-supported browsers](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers)
 
@@ -219,7 +219,7 @@ This "How to" is non-exhaustive there is a plethora of available metrics and pan
 
 Requirements:
 
-- Access to the node configured for `kubectl` usage with Intel® Smart Edge Open cluster.
+- Access to the node configured for `kubectl` usage with Intel® Smart Edge cluster.
 
 Steps:
 

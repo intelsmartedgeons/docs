@@ -16,14 +16,14 @@ Kubernetes keeps many aspects of how pods execute on nodes abstracted from the u
 
 Default kubelet configuration uses [CFS quota](https://en.wikipedia.org/wiki/Completely_Fair_Scheduler) to manage PODs execution times and enforce imposed CPU limits. For such a solution it is possible that individual PODs are moved between different CPU because of changing circumistances on Kubernetes node. When cetrains pods end itheir lifespan or CPU throttling comes in place, then a pod can be moved to another CPU.
 
-Another solution, default for Intel® Smart Edge Open, supported by Kubernetes is CPU manager. CPU manager uses [Linux CPUSET](https://www.kernel.org/doc/Documentation/cgroup-v1/cpusets.txt) mechanism to schedule PODS to invividual CPUs. Kubernetes defines shared pool of CPUs which initially contains all the system CPUs without CPUs reverved for system and kubelet itself. CPU selection is configurable with kubelet options. Kubernetes uses shared CPU pool to schedule PODs with three QoS classes `BestEffort`, `Burstable` and `Guaranteed`.
+Another solution, default for Intel® Smart Edge, supported by Kubernetes is CPU manager. CPU manager uses [Linux CPUSET](https://www.kernel.org/doc/Documentation/cgroup-v1/cpusets.txt) mechanism to schedule PODS to invividual CPUs. Kubernetes defines shared pool of CPUs which initially contains all the system CPUs without CPUs reverved for system and kubelet itself. CPU selection is configurable with kubelet options. Kubernetes uses shared CPU pool to schedule PODs with three QoS classes `BestEffort`, `Burstable` and `Guaranteed`.
 When a pod is qualified as `Guaranteed` QoS class then kubelet removes requested CPUs amount from shared pool and assigns the pod exclusively to the CPUs.
 
 ## How To
 
 ### Configure the CPU manager before cluster deployment
 
-Kubernetes CPU Management needs CPU manager policy to be set to `static` which is a default option in Intel® Smart Edge Open. This can be adjusted in the ESP provisioning configuration file, before deploying an experience kit. Amount of CPUs reserved for Kubernetes and operating system is defined in the same file:
+Kubernetes CPU Management needs CPU manager policy to be set to `static` which is a default option in Intel® Smart Edge. This can be adjusted in the ESP provisioning configuration file, before deploying an experience kit. Amount of CPUs reserved for Kubernetes and operating system is defined in the same file:
 
 - generate a custom configuration file with `./dek_provision.py --init-config > custom.yml`
 - edit generated file and set `policy` or `reserved_cpus` under `group vars: all:`, e.g.

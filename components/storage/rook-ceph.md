@@ -65,7 +65,7 @@ Just like native Ceph, Rook-Ceph provides block, filesystem, and object storage 
 
 ## Rook-Ceph configuration and usage
 
-To deploy the Rook-Ceph operator and Ceph to the Intel® Smart Edge Open cluster, `rook_ceph_enabled: True` must be set in `/inventory/default/group_vars/all/10-default.yml`, which is disabled by default. This will perform Rook operator and Ceph daemons install and deploy, images for Rook operator and Ceph daemon with CSI plugins are download from public docker repository.
+To deploy the Rook-Ceph operator and Ceph to the Intel® Smart Edge cluster, `rook_ceph_enabled: True` must be set in `/inventory/default/group_vars/all/10-default.yml`, which is disabled by default. This will perform Rook operator and Ceph daemons install and deploy, images for Rook operator and Ceph daemon with CSI plugins are download from public docker repository.
 
 ### Configuration
 
@@ -273,7 +273,7 @@ Create a PVC using the following yaml file
 ```
 
 ## Limitations
-There is a limitation for Rook-Ceph ansible role implementation in Smart Edge Open cluster, currently there is only support for single node and single disk deployment for Ceph. So by default, you don't need to set replica_pool_size > 1.
+There is a limitation for Rook-Ceph ansible role implementation in Smart Edge cluster, currently there is only support for single node and single disk deployment for Ceph. So by default, you don't need to set replica_pool_size > 1.
 
 ## Reference
 For further details:

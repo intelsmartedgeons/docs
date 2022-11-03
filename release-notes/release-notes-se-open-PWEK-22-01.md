@@ -14,7 +14,7 @@ Copyright (c) 2022 Intel Corporation
 
 # Overview
 
-The 22.01 release of Intel® Smart Edge Open provides edge developers with the Private Wireless Experience Kit as a cloud-native platform for delivering AI, video, and other edge services together with network services with optimized performance on Intel edge platforms.
+The 22.01 release of Intel® Smart Edge provides edge developers with the Private Wireless Experience Kit as a cloud-native platform for delivering AI, video, and other edge services together with network services with optimized performance on Intel edge platforms.
 
 This document describes the hardware and software configuration used to test the experience kit. For architecture and installation information, see the 
 [Private Wireless Experience Kit documentation](/experience-kits/private-wireless-experience-kit.md).
@@ -60,7 +60,7 @@ Centos OS 7.9.2009
 
 ## Servers
 
-The 22.01 release of Intel® Smart Edge Open Private Wireless Experience Kit supports the hardware platform on Dell PowerEdge R750 Server motherboard
+The 22.01 release of Intel® Smart Edge Private Wireless Experience Kit supports the hardware platform on Dell PowerEdge R750 Server motherboard
 
 Note: The same system specification is used for Edge node and Control Plane node. Some accelerator cards will not be needed.
 

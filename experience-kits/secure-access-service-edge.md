@@ -32,9 +32,9 @@ Copyright (c) 2022 Intel Corporation
 
 ## Overview
 
-Intel® Smart Edge Open provides customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance computing experience kits let you deliver AI, video, and other services optimized for performance at the edge.
+Intel® Smart Edge provides customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel cloud-native technologies, wireless networking, and high-performance computing experience kits let you deliver AI, video, and other services optimized for performance at the edge.
 
-The Secure Access Service Edge (SASE) Experience Kit (EK) offers an integrated solution with SD-WAN connectivity and network security capabilities on the Intel® Smart Edge Open edge platform. 
+The Secure Access Service Edge (SASE) Experience Kit (EK) offers an integrated solution with SD-WAN connectivity and network security capabilities on the Intel® Smart Edge edge platform. 
 
 SASE EK brings 3 fundamental capabilities for users:
 - Secure IPsec connection between edge clusters via POP cluster over WAN by ICN-SDEWAN solution introduction.
@@ -64,7 +64,7 @@ The Secure Access Service Edge Experience Kit deploys a reference architecture c
 - The SASE Edge Cluster is typically located on-premises. It hosts edge services and applications at the edge location.
 - The SASE POP Cluster sits at the provider network Point of Presence (POP) as usual and has similar capabilities/functionalities as SASE edge cluster offers. A typical use case for the POP cluster is to connect and provide secure traffic forwarding between edges via the IPSec tunnel.
 
-SASE POP cluster centralizes and hosts network security capability in POP data center based on Intel® Smart Edge Open cloud native design methodology and traffics from enterprise edge location get a series of network security services by Service Function Chaining (SFC) when going through POP DC or being forwarded by POP DC servers.
+SASE POP cluster centralizes and hosts network security capability in POP data center based on Intel® Smart Edge cloud native design methodology and traffics from enterprise edge location get a series of network security services by Service Function Chaining (SFC) when going through POP DC or being forwarded by POP DC servers.
 
 Below is the SASE overall architecture of SASE POP cluster, edge cluster, and SASE cloud cluster. 
 
@@ -292,7 +292,7 @@ The `deploy.sh` script installs all required packages and deploys the single nod
 
 ### Prepare the Provisioning System
 
-The ESP is used by all experience kits to provision the system that hosts the edge cluster. For more details about the ESP, including troubleshooting suggestions, please refer to the [Smart Edge Open Provisioning Process](/experience-kits/provisioning/provisioning.md).
+The ESP is used by all experience kits to provision the system that hosts the edge cluster. For more details about the ESP, including troubleshooting suggestions, please refer to the [Smart Edge Provisioning Process](/experience-kits/provisioning/provisioning.md).
 
 The following steps will walk you through installing software to the provisioning system, including Git, Docker and Docker Compose, and Python.
 
@@ -386,7 +386,7 @@ To configure Intel® SecL - DC Controller and/or application security with Intel
   - If you want to enable kmra, `kmra_apphsm_ip` - same as AWS instance public IP
 
 ### BMC
-BMC stands for Baseboard Management Controller, it is used to remotely control the hardware. In your saseek_config.yml, if you want set tpm and secure_boot option to true for your security feature, you need to set secure boot and tpm to true in the hosts section bmc part too. Follow this [Smart Edge Open Provisioning Process](/experience-kits/provisioning/provisioning.md#bmc) BMC part to do your customization. If your hardware can not enable idrac or you don't want to enable security features, then set tpm and secure_boot parameter to false.
+BMC stands for Baseboard Management Controller, it is used to remotely control the hardware. In your saseek_config.yml, if you want set tpm and secure_boot option to true for your security feature, you need to set secure boot and tpm to true in the hosts section bmc part too. Follow this [Smart Edge Provisioning Process](/experience-kits/provisioning/provisioning.md#bmc) BMC part to do your customization. If your hardware can not enable idrac or you don't want to enable security features, then set tpm and secure_boot parameter to false.
 ```shel.bash
 bios:
   tpm: true
@@ -428,7 +428,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 
 #### Check the Status of the Installation
 
-When logging in using remote console or SSH, a message will be displayed like the status of the deployment, for example: ```Smart Edge Open Deployment Status: in progress```
+When logging in using remote console or SSH, a message will be displayed like the status of the deployment, for example: ```Smart Edge Deployment Status: in progress```
 
 There are 3 possible statuses:
 - `in progress` - Deployment is in progress.

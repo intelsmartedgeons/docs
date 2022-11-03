@@ -4,7 +4,7 @@ Copyright (c) 2021 Intel Corporation
 ```
 # Install the Image on the Target System
 
-This section explains how to install the the Intel® Smart Edge Open Developer Experience Kit image on the target system and begin using Smart Edge Open cluster.
+This section explains how to install the the Intel® Smart Edge Developer Experience Kit image on the target system and begin using Smart Edge cluster.
 
 ## Optional: Enable Security Support in the BIOS
 
@@ -25,7 +25,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 ## Check the Status of the Installation
 
 When logging in using remote console or SSH, a message will be displayed that informs about status of the deployment, for example:
-```Smart Edge Open Deployment Status: in progress```
+```Smart Edge Deployment Status: in progress```
 
 Three statuses are possible:
 - `in progress` - Deployment is in progress.
@@ -43,9 +43,9 @@ Alternatively, you can inspect the deployment log found in `/opt/seo/logs`.
 
 Find detailed information on provisioning process and on resolving common installation problems in the [provisioning guide](/experience-kits/provisioning/provisioning.md).
 
-## 4. Use the Smart Edge Open cluster
+## 4. Use the Smart Edge cluster
 
-Now that you have created an Intel® Smart Edge Open edge node cluster capable of hosting edge applications, you can:
+Now that you have created an Intel® Smart Edge edge node cluster capable of hosting edge applications, you can:
 
 - [Onboard a sample application](/application-onboarding/application-onboarding-cmdline.md) to your cluster.
 - Download and run [reference implementations from the Intel® Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=ContentType&q=%22smart%20edge%20open%22)

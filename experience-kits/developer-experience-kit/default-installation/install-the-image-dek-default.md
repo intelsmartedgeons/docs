@@ -19,7 +19,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 
 When logging in with a remote console or SSH, a message will display the status of the deployment. For example:
 
-```Smart Edge Open Deployment Status: in progress```
+```Smart Edge Deployment Status: in progress```
 
 There are three possible status messages:
 
@@ -35,9 +35,9 @@ $ sudo journalctl -xefu seo
 
 You can find more details in the deployment log in `/opt/seo/logs`.
 
-## 4. Use the Smart Edge Open cluster
+## 4. Use the Smart Edge cluster
 
-Now that you have created an Intel® Smart Edge Open edge node cluster capable of hosting edge applications, you can:
+Now that you have created an Intel® Smart Edge edge node cluster capable of hosting edge applications, you can:
 
 - [Onboard a sample application](/application-onboarding/application-onboarding-cmdline.md) to your cluster.
 - Download and run [reference implementations from the Intel® Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=ContentType&q=%22smart%20edge%20open%22)

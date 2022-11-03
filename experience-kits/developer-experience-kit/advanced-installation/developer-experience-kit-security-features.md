@@ -3,7 +3,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
 
-# Configure security features for the Intel® Smart Edge Open Developer Experience Kit
+# Configure security features for the Intel® Smart Edge Developer Experience Kit
 
 Follow these steps to begin installing the Intel® Smart Edge Developer Experience Kit with security features enabled for platform attestation with Intel® SecL - DC and application security with Intel® SGX:
 

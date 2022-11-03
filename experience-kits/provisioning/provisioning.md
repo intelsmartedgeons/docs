@@ -3,7 +3,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2021 Intel Corporation
 ```
 
-# Intel® Smart Edge Open Provisioning Process
+# Intel® Smart Edge Provisioning Process
 
 * [Overview](#overview)
 * [Preconditions and software requirements](#Preconditions-and-software-requirements)
@@ -40,9 +40,9 @@ Copyright (c) 2021 Intel Corporation
 
 ## Overview
 
-The Intel® Smart Edge Open automated provisioning process relies on the [Intel® Edge Software
+The Intel® Smart Edge automated provisioning process relies on the [Intel® Edge Software
 Provisioner](https://github.com/intel/Edge-Software-Provisioner) (ESP). It provides a method of
-installation operating system automatically and the Intel® Smart Edge Open cluster deployment.
+installation operating system automatically and the Intel® Smart Edge cluster deployment.
 
 The Developer Experience Kit provides the `dek_provision.py` command-line utility, using the
 Intel® Edge Software Provisioner toolchain to deliver a smooth installation experience.
@@ -84,7 +84,7 @@ The default provisioning process consists of the following stages:
 <a id="default-repository-cloning"></a>
 #### Repository Cloning
 
-Each of the Intel® Smart Edge Open experience kits comes with its provisioning utility tailored to the kit's
+Each of the Intel® Smart Edge experience kits comes with its provisioning utility tailored to the kit's
 requirements. This script resides in the root directory of an experience kit repository, and its name matches the
 following pattern: `<experience-kit-name-abbreviation>_provision.py`, e.g., `dek_provision.py`.
 
@@ -102,7 +102,7 @@ For convenience, you can change the current directory to the directory the kit i
 <a id="default-configuration"></a>
 #### Configuration
 
-The Intel® Smart Edge Open default provisioning process is designed not to require any special configuration steps. The
+The Intel® Smart Edge default provisioning process is designed not to require any special configuration steps. The
 provisioning scripts should work without any configuration options specified. In some environments, it may, however, be
 necessary to customize some of them.  For this purpose, the operator can set some of the most common parameters using
 the command line interface.  For details, see the [Command Line Arguments](#command-line-arguments) section.
@@ -190,7 +190,7 @@ To log into the system, use `smartedge-open` as both the user name and password.
 ##### Check the Status of the Installation
 
 When logging in using remote console or SSH, a message will be displayed that informs about the status of the deployment, for example,
-```Smart Edge Open Deployment Status: in progress```
+```Smart Edge Deployment Status: in progress```
 
 Three statuses are possible:
 - `in progress` - deployment is in progress
@@ -356,8 +356,8 @@ The second method is to use the git credentials options of the provisioning scri
 ```bash
 [provisioning system] # ./dek_provision.py -h
 […]
-  --git-user NAME    Name of the user to be used to clone required Smart Edge Open repositories
-  --git-password VALUE  Password to be used to clone required Smart Edge Open repositories
+  --git-user NAME    Name of the user to be used to clone required Smart Edge repositories
+  --git-password VALUE  Password to be used to clone required Smart Edge repositories
 […]
 ```
 
@@ -439,7 +439,7 @@ Only the installer will use these credentials. They won't affect the provisionin
 
 ### PXE
 
-Smart Edge Open provisioning process supports network boot with PXE protocol. This provisioning scenario does not need any installation media to carry bootable image.
+Smart Edge provisioning process supports network boot with PXE protocol. This provisioning scenario does not need any installation media to carry bootable image.
 
 > NOTE: PXE protocol is a DHCP exentsion, using PXE will disrupt current network DHCP server, so it should be done in separated network environment. 
 

@@ -2,7 +2,7 @@
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) 2022 Intel Corporation
 ```
-# Install the Intel® Smart Edge Open Developer Experience Kit - requirements
+# Install the Intel® Smart Edge Developer Experience Kit - requirements
 
 There are two ways to install the Developer Experience kit on your target system:
 
@@ -13,8 +13,8 @@ This page includes the requirements to complete both a default installation and 
 
 |      |
 | :--: |
-| [![Smart Edge Open Developer Experience Kit Workflow Diagram](../images/dek-workflow-diagram.png)](images/dek-workflow-diagram.png) |
-| <b>The Intel® Smart Edge Open Developer Experience Kit installation workflow</b>
+| [![Smart Edge Developer Experience Kit Workflow Diagram](../images/dek-workflow-diagram.png)](images/dek-workflow-diagram.png) |
+| <b>The Intel® Smart Edge Developer Experience Kit installation workflow</b>
 
 ## System requirements
 
@@ -62,7 +62,7 @@ Advanced installations that enable either platform attestation using Intel® Sec
    - Ubuntu 20.04 LTS
 - A Linux system from which deployment of the controller node is initiated
 
-The Developer Experience Kit uses the [Edge Software Provisioner (ESP)](https://github.com/intel/Edge-Software-Provisioner), which automates the process of provisioning bare-metal or virtual machines with an operating system and software stack. Intel® Smart Edge Open provides a fork of the [Ubuntu OS ESP Profile](https://github.com/intel/rni-profile-base-ubuntu) tailored for its specific needs.
+The Developer Experience Kit uses the [Edge Software Provisioner (ESP)](https://github.com/intel/Edge-Software-Provisioner), which automates the process of provisioning bare-metal or virtual machines with an operating system and software stack. Intel® Smart Edge provides a fork of the [Ubuntu OS ESP Profile](https://github.com/intel/rni-profile-base-ubuntu) tailored for its specific needs.
 
 
 ### Next

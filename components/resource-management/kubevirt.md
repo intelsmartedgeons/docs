@@ -18,11 +18,11 @@ KubeVirt provides a command line utility (`virtctl`) which allows for management
 The types of VM deployments can be split into two categories based on the storage required by the workload.
 * **Stateless** VMs are backed by ephemeral storage, meaning that the data will disappear with VM restart/reboot.
 * **Stateful** VMs are backed by persistent storage, meaning that data will persist after VM restart/reboot.
-The type of storage required will be determined based on the use case. In Smart Edge Open, support for both types of VM is available with the aid of KubeVirt.
+The type of storage required will be determined based on the use case. In Smart Edge, support for both types of VM is available with the aid of KubeVirt.
 
 #### VMs with ephemeral storage
 
-These are VMs with ephemeral storage, such as ContainerDisk storage that would be similarly deployed to ordinary container pods. The data contained in the VM would be erased on each VM deletion/restart. Thus, it is suitable for stateless applications running inside the pods. A better fit for such an application would be running the workload in a container pod but for various reasons (e.g., a legacy application), users may not want to containerize their workload. From an K8s/Smart Edge Open perspective, the advantage of this deployment is no additional storage configuration; users only need to have a cluster with KubeVirt deployed and a dockerized version of a VM image to spin up the VM.
+These are VMs with ephemeral storage, such as ContainerDisk storage that would be similarly deployed to ordinary container pods. The data contained in the VM would be erased on each VM deletion/restart. Thus, it is suitable for stateless applications running inside the pods. A better fit for such an application would be running the workload in a container pod but for various reasons (e.g., a legacy application), users may not want to containerize their workload. From an K8s/Smart Edge perspective, the advantage of this deployment is no additional storage configuration; users only need to have a cluster with KubeVirt deployed and a dockerized version of a VM image to spin up the VM.
 
 #### VMs with persistent Local Storage
 
@@ -32,13 +32,13 @@ In the case of persistent storage, it is recommended to use storage provided by 
 
 ## How To
 
-### Enable Kubevirt in Smart Edge Open
+### Enable Kubevirt in Smart Edge
 
 The KubeVirt role responsible for bringing up KubeVirt components is enabled by default in the Smart Edge via Ansible\* automation. The following is a complete list of steps to bring up all components related to VM support. VM support also requires Virtualization and VT-d to be enabled in the BIOS of the Edge Node.
 
 KubeVirt is deployed by default both in Intel® Smart Edge Node software v6 and Secure Access Service Edge (SASE). Default SR-IOV interfaces are created and bound to vfio-pci by [SR-IOV Network Operator](../networking/sriov-network-operator.md). Storage provisioning is done by [Rook-Ceph](../storage/rook-ceph.md).
 
-### Validate Kubevirt in Smart Edge Open cluster
+### Validate Kubevirt in Smart Edge cluster
 
 On successful deployment, the following pods will be in a running state:
 ```shell
@@ -138,7 +138,7 @@ Execute following steps:
       ```shell
       # kubectl virt console cirros-stateless-vm
       ```
-  5. Check that IP address of Smart Edge Open/K8s overlay network is available in the VM:
+  5. Check that IP address of Smart Edge/K8s overlay network is available in the VM:
       ```shell
       [root@vm ~]# ip addr
       ```

@@ -15,19 +15,19 @@ Copyright (c) 2022 Intel Corporation
 
 # Overview
 
-The 22.02 release of Intel® Smart Edge Open provides edge developers with the Secure Access Service Edge Experience Kit as a cloud-native platform for delivering integrated solution with SD-WAN connectivity and network security capabilities on Intel edge platform.
+The 22.02 release of Intel® Smart Edge provides edge developers with the Secure Access Service Edge Experience Kit as a cloud-native platform for delivering integrated solution with SD-WAN connectivity and network security capabilities on Intel edge platform.
 This document describes the hardware and software configuration used to test the experience kit. For architecture and installation information, see
 [Secure Access Service Edge documentation](../experience-kits/secure-access-service-edge-limited-release.md).
 
 ## Secure and Trusted Computing
 
-- <b>Remote Attestation</b>: Trusted computing consists primarily of two activities – measurement, and attestation. Measurement is the act of obtaining cryptographic representations for the system state. Attestation is the act of comparing those cryptographic measurements against expected values to determine whether the system booted into an acceptable state. This is key for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge Open supports this feature using Intel® Security Libraries (ISecL).
+- <b>Remote Attestation</b>: Trusted computing consists primarily of two activities – measurement, and attestation. Measurement is the act of obtaining cryptographic representations for the system state. Attestation is the act of comparing those cryptographic measurements against expected values to determine whether the system booted into an acceptable state. This is key for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge supports this feature using Intel® Security Libraries (ISecL).
 
-- <b>Enclave Trust with Attestation</b>: Handling sensitive data is a key requirement for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge Open supports this feature using The Intel® Software Guard Extensions (Intel® SGX). Remote attestation allows a remote party to check that the intended software is securely running within an enclave on a system with the Intel® SGX enabled.
+- <b>Enclave Trust with Attestation</b>: Handling sensitive data is a key requirement for Edge Computing in public and private/On-Premises deployment. Intel® Smart Edge supports this feature using The Intel® Software Guard Extensions (Intel® SGX). Remote attestation allows a remote party to check that the intended software is securely running within an enclave on a system with the Intel® SGX enabled.
 
 ## Reference Implementation on Intel ESH
 
-- Telehealth Reference Implementation is supported and verified on Intel® Smart Edge Open SASE 22.02.
+- Telehealth Reference Implementation is supported and verified on Intel® Smart Edge SASE 22.02.
 
 
 This document describes the hardware and software configuration used to test the experience kit. For architecture and installation information, see the [Sample Reference Documentation](../sample/se-open-sase-22-02-samples-limited-release.md).
@@ -70,7 +70,7 @@ Ubuntu OS 20.04.03
 
 ## Server
 
-The 22.02 release of Intel® Smart Edge Open supports the following hardware platform:
+The 22.02 release of Intel® Smart Edge supports the following hardware platform:
 -  Dell PowerEdge R750 Server motherboard
 
 ## Configuration

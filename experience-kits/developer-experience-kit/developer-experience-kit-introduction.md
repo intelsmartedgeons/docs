@@ -4,19 +4,19 @@ Copyright (c) 2022 Intel Corporation
 ```
 # Introduction
 
-This guide provides information about the Intel® Smart Edge Open Developer Experience Kit. The following sectons explain the capabilities of the Developer Experience Kit as well as how to install and use it. 
+This guide provides information about the Intel® Smart Edge Developer Experience Kit. The following sectons explain the capabilities of the Developer Experience Kit as well as how to install and use it. 
 
 ## Audience
 
-The Intel® Smart Edge Open Developer Experience Kit is useful for application developers who want to explore the Intel® Smart Edge Open features without the 5G components or build their own applications using containerized edge services like networking, security, and telemetry. 
+The Intel® Smart Edge Developer Experience Kit is useful for application developers who want to explore the Intel® Smart Edge features without the 5G components or build their own applications using containerized edge services like networking, security, and telemetry. 
 
 To install the Developer experience kit, you will need basic knowledge of operating system administration, server administration, and Kubernetes.
 
-## About the Intel® Smart Edge Open Developer Experience Kit
+## About the Intel® Smart Edge Developer Experience Kit
 
-The Intel® Smart Edge Open Developer Experience Kit provides customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel Cloud Native technologies, and high-performance compute, this kit provides a blueprint that enables you to build AI, video and edge services covering diverse IoT segments with optimization at the edge.
+The Intel® Smart Edge Developer Experience Kit provides customized infrastructure deployments for common network and on-premises edge use cases. Combining Intel Cloud Native technologies, and high-performance compute, this kit provides a blueprint that enables you to build AI, video and edge services covering diverse IoT segments with optimization at the edge.
 
-The Intel® Smart Edge Open Developer Experience Kit contains building blocks that provide functionality for containerized networking, resource management, and telemetry. These building blocks are designed to support a variety of edge computing cases.
+The Intel® Smart Edge Developer Experience Kit contains building blocks that provide functionality for containerized networking, resource management, and telemetry. These building blocks are designed to support a variety of edge computing cases.
 
 ## Supported Hardware
 
@@ -65,7 +65,7 @@ The Intel Smart Edge team cannot guarantee support for issues in deployments tha
 
 ### Next
 
-The next section includes detailed description of the building blocks included in the Intel® Smart Edge Open Developer Experience Kit. 
+The next section includes detailed description of the building blocks included in the Intel® Smart Edge Developer Experience Kit. 
 
 
 

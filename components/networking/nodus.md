@@ -16,12 +16,12 @@ It consists of four major components:
 
 Nodus also provides a CNI plugin based on OVN and OpenVSwitch (OVS). It works with Multus CNI to provide pods with multiple interfaces.
 
-One of the important features of Nodus is the ability to create virtual LAN networks on pod's interfaces at runtime. The CNI plugin also utilises physical interfaces to connect a pod to an external network (WAN) called a "provider network". This functionality is particularly important for SD-WAN CNFs used in the Intel® Smart Edge Open Secure Access Service Edge (SASE) experience kit. The CNF pods act as a proxy between the virtual LANs in the SASE Edge cluster and the WAN. Nodus is enabled by default in the SASE experience kit.
+One of the important features of Nodus is the ability to create virtual LAN networks on pod's interfaces at runtime. The CNI plugin also utilises physical interfaces to connect a pod to an external network (WAN) called a "provider network". This functionality is particularly important for SD-WAN CNFs used in the Intel® Smart Edge Secure Access Service Edge (SASE) experience kit. The CNF pods act as a proxy between the virtual LANs in the SASE Edge cluster and the WAN. Nodus is enabled by default in the SASE experience kit.
 To read about Nodus components and features go to [icn-nodus](https://github.com/akraino-edge-stack/icn-nodus).
 
 ## How It Works
 
-Typically, in Kubernetes, each pod has only one network interface (apart from a loopback). With Multus, users can create a multi-homed pod that has multiple interfaces. To accomplish this, Multus acts as a “meta-plugin”, a CNI plugin that can call multiple other CNI plugins to add multiple interfaces to a pod. In the Intel® Smart Edge Open SASE experience kit, Nodus CNI is enabled by default as the secondary CNI whereas Calico act as the primary CNI. In such scenarios where Multus is used, net1 interface is by convention the OVN default interface that connects to Multus. The other interfaces (net2, net3, ...) are added by Nodus according to the pod annotation. 
+Typically, in Kubernetes, each pod has only one network interface (apart from a loopback). With Multus, users can create a multi-homed pod that has multiple interfaces. To accomplish this, Multus acts as a “meta-plugin”, a CNI plugin that can call multiple other CNI plugins to add multiple interfaces to a pod. In the Intel® Smart Edge SASE experience kit, Nodus CNI is enabled by default as the secondary CNI whereas Calico act as the primary CNI. In such scenarios where Multus is used, net1 interface is by convention the OVN default interface that connects to Multus. The other interfaces (net2, net3, ...) are added by Nodus according to the pod annotation. 
 
 In a scenario where a CNF pod becomes a proxy between a virtual LAN in the Edge cluster and the WAN, it needs to have two types of interfaces configured:
 

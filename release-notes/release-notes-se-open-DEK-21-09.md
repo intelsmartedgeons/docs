@@ -14,7 +14,7 @@ Copyright (c) 2021 Intel Corporation
 
 # Overview
 
-The 21.09 release of Intel® Smart Edge Open introduces the Developer Experience Kit. Edge developers can use the Developer Experience Kit as a cloud-native platform for testing edge applications.
+The 21.09 release of Intel® Smart Edge introduces the Developer Experience Kit. Edge developers can use the Developer Experience Kit as a cloud-native platform for testing edge applications.
 
 This document describes the hardware and software configuration used to test the experience kit. For architecture and installation information, see the [Developer Experience Kit documentation](/experience-kits/developer-experience-kit.md).
 
@@ -109,4 +109,4 @@ The Developer Experience Kit uses the following building blocks:
 
 ## Disclaimer
 
-Smart Edge Open 21.09 does not include the latest functional and security updates. Smart Edge Open is targeted to be released in Q4'2021 and will include additional functional and security updates. Customers should update to the latest version as it becomes available.
+Smart Edge 21.09 does not include the latest functional and security updates. Smart Edge is targeted to be released in Q4'2021 and will include additional functional and security updates. Customers should update to the latest version as it becomes available.
